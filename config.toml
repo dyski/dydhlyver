@@ -1,11 +1,10 @@
 baseURL = 'https://cornish.app/'
 languageCode = 'en-us'
-title = 'Cornish Learn'
-theme = "base"
+title = 'Cornish Learn6'
 
-
-
-
+[params]
+custom_css = ["css/style.css","css/bootstrap.css",]
+custom_js = ["js/popper.min.js", "js/custom.js", "js/bootstrap.min.js",]
 
 [taxonomies]
 	author = "authors"

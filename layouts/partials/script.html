@@ -1,6 +1,12 @@
-<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/popper.min.js"></script>
-<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/custom.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/scripts/popper.min.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/custom.js"></script>-->
+
+{{ range .Site.Params.custom_js -}}
+    <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
 
 
 <script>
