@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'Cornish Learn'
 
 [params]
-custom_css = ["css/style.css","css/bootstrap.css",]
+custom_css = ["styles/style.css","styles/bootstrap.css",]
 custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custom.js"]
 
 [taxonomies]
