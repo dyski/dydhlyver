@@ -2,7 +2,7 @@
 title: "Home"
 date: 2020-01-26T23:23:13Z
 draft: true
-layout: search
+layout: home
 ---
 
 Lorem search ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
