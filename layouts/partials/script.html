@@ -4,11 +4,11 @@
 <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="/scripts/custom.js"></script>-->
 
-<!--*{{ range .Site.Params.custom_js -}}
+{{ range .Site.Params.custom_js -}}
     <script type="text/javascript" src="{{ . | absURL }}"></script>
-{{- end }}-->
-<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="/scripts/custom.js"></script>
+{{- end }}
+<!--<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/scripts/custom.js"></script>-->
 
 
 <script>

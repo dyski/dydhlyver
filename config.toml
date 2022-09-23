@@ -4,7 +4,7 @@ title = 'Cornish Learn'
 
 [params]
 custom_css = ["css/style.css","css/bootstrap.css",]
-custom_js = ["js/custom.js", "js/bootstrap.min.js", ]
+custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custom.js"]
 
 [taxonomies]
 	author = "authors"
