@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Cornish Learn'
 theme = "base"
 
+
+
+
+
 [taxonomies]
 	author = "authors"
 	category = "categories"
