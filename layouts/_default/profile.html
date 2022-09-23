@@ -1,0 +1,86 @@
+{{ define "main" }}
+
+<div class="page-content header-clear-medium">
+    <div class="card-top notch-clear">
+        <a href="#" data-back-button  class="icon icon-xl color-theme font-15 font-700"><i class="fa fa-arrow-left pt-2 font-14 me-n2"></i> Back</a>
+     
+    </div>
+
+
+    <!-- Margin bottom and padding-bottom to pull the card under the image-->
+    <!-- Top card must have over-card class to go over the card below it -->
+    <img style="margin-bottom:-80px" src="/images/pictures/faces/2s.png" class="mx-auto shadow-xl rounded-circle over-card" width="150">
+    <div style="padding-top:80px;" class="card card-style">
+        <div class="content">
+            <h1 class="text-center font-32">{{$.Page.Params.name}}</h1>
+            <a href="#" class="color-highlight text-center d-block mt-n2 font-11 pb-3">{{$.Page.Params.position}}</a>
+            <div class="text-center">
+                <a href="{{$.Page.Params.facebook}}" class="icon icon-s mx-2 mb-4 rounded-circle bg-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon icon-s mx-2 mb-4 rounded-circle bg-instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="icon icon-s mx-2 mb-4 rounded-circle bg-twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <em class="text-center font-20 font-300 d-block color-theme opacity-60 mb-3"><i class="fa fa-quote-left pe-3"></i>{{$.Page.Params.quote}}<i class="fa fa-quote-right ps-3"></i></em>
+            <div class="divider mt-4"></div>
+
+            {{ .Content }}
+
+            <div class="divider"></div>
+
+            <!--<h4 class="mb-3">Posts by {{$.Page.Params.name}}</h4>
+            <a href="#">
+                <div class="d-flex mb-3">
+                    <div class="align-self-center me-auto">
+                        <img src="/images/pictures/18s.jpg" class="rounded-m me-3" width="90">
+                        <span class="badge text-uppercase px-2 py-1 bg-blue-dark d-block me-3 mt-n3 rounded-m under-slider-btn">ECONOMICS</span>
+                    </div>
+                    <div class="align-self-center w-100">
+                        <h5 class="font-500 font-15 pt-2">Global warming increases development speed of electric cars.</h5>
+                        <span class="color-theme font-11 opacity-50">25 Minutes Ago</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-flex mb-3">
+                    <div class="align-self-center me-auto">
+                        <img src="/images/pictures/28s.jpg" class="rounded-m me-3" width="90">
+                        <span class="badge text-uppercase px-2 py-1 bg-green-dark d-block me-3 mt-n3 rounded-m under-slider-btn">SOCIAL</span>
+                    </div>
+                    <div class="align-self-center w-100">
+                        <h5 class="font-500 font-15 pt-2">Hosting companies now charge influencers more that double. Here's why.</h5>
+                        <span class="color-theme font-11 opacity-50">25 Minutes Ago</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="d-flex mb-3">
+                    <div class="align-self-center me-auto">
+                        <img src="/images/pictures/21s.jpg" class="rounded-m me-3" width="90">
+                        <span class="badge text-uppercase px-2 py-1 bg-red-dark d-block me-3 mt-n3 rounded-m under-slider-btn">TECHNOLOGY</span>
+                    </div>
+                    <div class="align-self-center w-100">
+                        <h5 class="font-500 font-15 pt-2">Apple's sales increased tenfold after new Macbook M1 Realease.</h5>
+                        <span class="color-theme font-11 opacity-50">25 Minutes Ago</span>
+                    </div>
+                </div>
+            </a>-->
+
+            <!--<div class="divider mt-4 mb-0"></div>
+            <div class="row mb-0">
+                <div class="col-5">
+                    <a href="#" class="btn btn-full rounded-sm border-highlight color-highlight text-uppercase font-700 btn-m mt-4">Chat</a>
+                </div>
+                <div class="col-7">
+                    <a href="#" class="btn btn-full rounded-sm bg-highlight text-uppercase font-700 btn-m mt-4">Follow</a>
+                </div>
+            </div>
+        -->
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+{{ end }}

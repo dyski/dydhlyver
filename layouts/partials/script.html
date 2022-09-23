@@ -1,0 +1,38 @@
+<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/popper.min.js"></script>
+<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ .Site.BaseURL }}scripts/custom.js"></script>
+
+
+<script>
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+    
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+  trigger: 'focus'
+})
+
+
+
+    </script>
+
+    
+<script type="text/javascript">
+  document.addEventListener('play', function(e){
+      var audios = document.getElementsByTagName('audio');
+      for(var i = 0, len = audios.length; i < len;i++){
+          if(audios[i] != e.target){
+              audios[i].pause();
+              audios[i].currentTime = 0;
+          }
+      }
+  }, true);
+  
+  </script>

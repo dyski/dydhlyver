@@ -1,0 +1,48 @@
+{{.Inner}}
+<div class="mb-5 text-size-changer">
+{{ if .Page.Params.cornish }}
+  {{ $counter := 0 }}
+
+<button onclick="document.getElementById('sound{{ $counter }}').play();" 
+class="ad-300x50 ad-300x50-fixed bg-highlight mb-2 btn collapse show " type="button" data-bs-toggle="collapse" 
+data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">START</button> 
+  
+  {{ range .Page.Params.cornish }}
+ 
+<audio id="sound{{ $counter }}" src="https://cornish.app/audio/anwodhow/201206/{{ $counter }}.mp3" preload="auto"></audio>
+
+<div class="collapse " id="text{{ $counter }}" >
+    <div class="d-flex " onclick="document.getElementById('sound{{ $counter }}').play();">
+        <div class="align-self-center">
+            <div class="bg-theme shadow-m px-3 py-2 rounded-m">
+                <p class="lh-base mb-0 color-theme" >{{ index $.Page.Params.cornish $counter  | safeHTML }}</p> 
+            </div>
+        </div>
+    </div>  
+    
+    <div class="d-flex">
+        <div class="align-self-center ms-auto">
+            <div class="shadow-m px-3 py-2 rounded-m collapse" id="tranlation{{ $counter }}">
+                <p class="lh-base mb-0">{{ index $.Page.Params.english $counter }}</p>
+            </div>
+            <div class="mb-3"></div>
+            
+        </div>
+        <div class="align-self-end" data-bs-toggle="collapse" href="#tranlation{{ $counter }}">
+            <a href="#" class="btn btn-xxs btn-full mb-3 rounded-xl text-uppercase font-900 bg-theme mb-3 rounded-s text-uppercase"><i class="fa fa-question"></i></a>
+        </div>
+    </div>
+    {{ $counter = add $counter 1 }}
+    <button onclick="document.getElementById('base2').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();"
+    class="ad-300x50 ad-300x50-fixed bg-highlight mb-2 btn  collapse show" type="button" data-bs-toggle="collapse" 
+    data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">Continue</button>
+</div>
+
+{{ end }}
+{{ end }}
+</div>
+
+<div class="divider my-5" id="base1">-</div>
+<div class="divider my-5" id="base1">;</div>
+<div class="divider  my-5" id="base2">'</div>
+

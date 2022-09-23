@@ -1,0 +1,52 @@
+baseURL = 'https://cornish.app/'
+languageCode = 'en-us'
+title = 'Cornish Learn'
+theme = "base"
+
+[taxonomies]
+	author = "authors"
+	category = "categories"
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    pre = ''
+    url = '/home/'
+    weight = 1
+ [menu.main.params]
+   class='fa fa-home'
+
+  [[menu.main]]
+    name = 'Posts'
+    pre = ''
+    url = '/posts/'
+    weight = 2
+  [menu.main.params]
+   class='fa fa-chalkboard-teacher'
+
+[[menu.main]]
+  name = 'News'
+  pre = ''
+  url = '/bbcnews/'
+   weight = 3
+  [menu.main.params]
+   class='fa fa-book-open'
+
+[[menu.main]]
+  name = 'Search'
+  pre = ''
+  url = '/search/'
+   weight = 4
+   [menu.main.params]
+   class='fa fa-search'
+
+[[menu.main]]
+  name = 'settings'
+  post = 'menu-settings'
+  icon = 'menu-settings'
+  pre = 'menu-settings'
+  url = "#menu"
+   weight = 5
+[menu.main.params]
+   class='fa fa-cog'
+   

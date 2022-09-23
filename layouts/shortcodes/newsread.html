@@ -1,0 +1,37 @@
+{{.Inner}}
+<div class="mb-5 text-size-changer">
+{{ if .Page.Params.cornish }}
+  {{ $counter := 0 }}
+  
+  
+  <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();" 
+  class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase collapse show " type="button" data-bs-toggle="collapse" 
+  data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">START</button> 
+
+
+  {{ range .Page.Params.cornish }}
+ 
+<audio id="sound{{ $counter }}" src="https://cornish.app/audio/anwodhow/201206/{{ $counter }}.mp3" preload="auto"></audio>
+
+<div class="collapse" id="text{{ $counter }}" >
+    <div  onclick="document.getElementById('sound{{ $counter }}').play();">
+        
+            
+        
+                <p class="mb-3" data-toggle="tooltip" title="{{ index $.Page.Params.english $counter }}">{{ index $.Page.Params.cornish $counter  | safeHTML }}</p>
+        
+        
+    </div>  
+    
+   
+    {{ $counter = add $counter 1 }}
+
+    <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();"
+    class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase collapse show " type="button" data-bs-toggle="collapse" 
+    data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">Continue</button></div>
+
+{{ end }}
+{{ end }}
+</div>
+<div class="divider divider-margins" id="end"></div>
+

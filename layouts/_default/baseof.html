@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body class="detect-theme" data-highlight="body-default" data-gradient="body-default">
+
+      <div id="preloader">
+        <div class="spinner-border color-highlight" role="status"></div>
+      </div>
+
+     
+       
+      <div id="page">
+        <!--{{- partial "header-sticky.html" . -}}-->
+        {{ if not .IsHome }}{{- partial "footer-bar.html" . -}}{{ end }}
+        {{- block "main" . }}{{- end }}
+        {{- partial "hidden.html" . -}}
+        {{ if .IsHome }}{{- partial "install.html" . -}}{{ end }}
+      </div>
+        {{- partial "script.html" . -}}
+    </body>
+</html>
