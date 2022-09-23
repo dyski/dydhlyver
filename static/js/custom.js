@@ -1,7 +1,3 @@
-
-
-
-
 //Removing Preloader
 setTimeout(function(){
     var preloader = document.getElementById('preloader')
@@ -14,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Global Variables
     let isPWA = true;  // Enables or disables the service worker and PWA
     let isAJAX = true; // AJAX transitions. Requires local server or server
-    var pwaName = "Cornish.app"; //Local Storage Names for PWA
+    var pwaName = "Sticky"; //Local Storage Names for PWA
     var pwaRemind = 1; //Days to re-remind to add to home
     var pwaNoCache = false; //Requires server and HTTPS/SSL. Will clear cache with each visit
 
@@ -24,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Place all your custom Javascript functions and plugin calls below this line
     function init_template(){
-
-    
         //Caching Global Variables
         var i, e, el; //https://www.w3schools.com/js/js_performance.asp
 
@@ -310,8 +304,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.scrollTo({ top: 0, behavior: `smooth` })
             }));
         }
-
-
 
 		//Check iOS Version and add min-ios15 class if higher or equal to iOS15
 		function iOSversion() {
@@ -668,8 +660,22 @@ document.addEventListener('DOMContentLoaded', () => {
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
               return new bootstrap.Tooltip(tooltipTriggerEl)
             })
-        }
-        */
+       
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+    
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
+var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+  trigger: 'focus'
+}) }*/
+        
 
 
         //Dropdown
@@ -1471,7 +1477,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    
     init_template();
 });
 
