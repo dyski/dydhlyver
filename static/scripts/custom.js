@@ -21,23 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //Place all your custom Javascript functions and plugin calls below this line
     function init_template(){
 
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
+
         
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    });
-    
-    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-      trigger: 'focus'
-    });
-
-
-
-
         //Caching Global Variables
         var i, e, el; //https://www.w3schools.com/js/js_performance.asp
 
