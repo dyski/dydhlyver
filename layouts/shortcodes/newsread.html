@@ -3,10 +3,10 @@
 {{ if .Page.Params.cornish }}
   {{ $counter := 0 }}
   
-  <div class="text-end">
+  <div class="text-end" id="text{{ $counter }}">
   <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();" 
   class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase collapse show " type="button" data-bs-toggle="collapse" 
-  data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">START</button> 
+  data-bs-target="#text{{ $counter }}" >START</button> 
 </div>
 
 
@@ -26,10 +26,10 @@
     
    
     {{ $counter = add $counter 1 }}
-    <div class="text-end">
+    <div class="text-end" id="text{{ $counter }}">
     <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();"
     class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase collapse show " type="button" data-bs-toggle="collapse" 
-    data-bs-target="#text{{ $counter }}" id="text{{ $counter }}">Continue</button>
+    data-bs-target="#text{{ $counter }}">Continue</button>
     </div>
   
   </div>
