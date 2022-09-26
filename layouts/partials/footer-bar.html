@@ -1,35 +1,20 @@
-<!--<div id="footer-bar" class="footer-bar-1">
-    <a href="/posts/"><i class="fa fa-home"></i><span>Home</span></a>
-    <a href="/tags/"><i class="fa fa-chalkboard-teacher"></i><span>Features</span></a>
-    <a href="/"><i class="fa fa-book-open"></i><span>Pages</span></a>
-    <a href="/"><i class="fa fa-search"></i><span>Search</span></a>
-    <a href="#" data-menu="menu-settings"><i class="fa fa-cog"></i><span>Settings</span></a>
-</div>-->
+  <!-- App Bottom Menu -->
 
-<div id="footer-bar" class="footer-bar-1">
+<div class="appBottomMenu">  
     
-    {{ $current := . }}
-    
-        {{ range .Site.Menus.main }}
+  {{ range .Site.Menus.main }}
 
-        <a href="{{ .URL }}" 
-        {{ if .Post }}
-        data-menu="menu-settings"
-        {{ end }}
+  <a href="{{ .URL }}" class="item" {{ if .Post }}data-bs-toggle="offcanvas"{{ end }}>
 
-        {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-        {{ $active = or $active (eq .Name $current.Title) }}
-  {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "post")) }}
-  {{ $active = or $active (and (eq .Name "Home") (eq $current.Section "home")) }}
-  {{ $active = or $active (and (eq .Name "Search") (eq $current.Section "Search")) }}
+    <div class="col">
+        <ion-icon name="{{ .Params.class }}"></ion-icon> 
+        <strong>{{ .Name  }}</strong>
+    </div>
+</a>
+
+ 
   
-  {{ if $active }} class="active-nav"{{ end }}>
-  
-        
+  {{ end }}
 
-        {{printf "<i class=\"%s\"></i> " .Params.class | safeHTML }}
-        <span>{{ $text := print .Name  | safeHTML }}{{ $text }}</span>
-        </a>
-        {{ end }}
-   
+
 </div>

@@ -3,12 +3,21 @@ languageCode = 'en-us'
 title = 'Cornish Learn'
 
 [params]
-custom_css = ["styles/style.css","styles/bootstrap.css",]
-custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custom.js"]
 
 [taxonomies]
 	author = "authors"
 	category = "categories"
+
+[outputFormats]
+    [outputFormats.manifest]
+        name = "manifest"
+        baseName = "manifest"
+        mediaType = "application/json"
+        notAlternative = "true"
+
+
+[outputs]
+    home = [ "HTML", "RSS", "MANIFEST"]
 
 [menu]
   [[menu.main]]
@@ -17,7 +26,7 @@ custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custo
     url = '/home/'
     weight = 1
  [menu.main.params]
-   class='fa fa-home'
+   class='home-outline'
 
   [[menu.main]]
     name = 'Posts'
@@ -25,7 +34,7 @@ custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custo
     url = '/posts/'
     weight = 2
   [menu.main.params]
-   class='fa fa-chalkboard-teacher'
+   class='cube-outline'
 
 [[menu.main]]
   name = 'News'
@@ -33,7 +42,7 @@ custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custo
   url = '/bbcnews/'
    weight = 3
   [menu.main.params]
-   class='fa fa-book-open'
+   class='chatbubble-ellipses-outline'
 
 [[menu.main]]
   name = 'Search'
@@ -41,15 +50,15 @@ custom_js = ["scripts/popper.min.js", "scripts/bootstrap.min.js", "scripts/custo
   url = '/search/'
    weight = 4
    [menu.main.params]
-   class='fa fa-search'
+   class='layers-outline'
 
 [[menu.main]]
-  name = 'settings'
+  name = 'Settings'
   post = 'menu-settings'
-  icon = 'menu-settings'
+  icon = 'menu-outline'
   pre = 'menu-settings'
-  url = "#menu"
+  url = "#sidebarPanel"
    weight = 5
 [menu.main.params]
-   class='fa fa-cog'
+   class='menu-outline'
    

@@ -1,45 +1,4 @@
 {{ define "main" }}
 
-{{- partial "header-sticky.html" . -}}
-<div class="page-content header-clear-medium ">
-        <div class="card card-style">
-            <div class="content">
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <h2 class="mb-0">Blog</h2>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <h6 class="mb-0 opacity-30 font-13">2hr, 25min</h6>
-                    </div>
-                </div>
-                
-                <div class="divider mt-3 mb-3"></div>
-                {{ range .Pages.ByPublishDate.Reverse }}
-                <a href="{{ .RelPermalink }}" class="d-flex mb-3">
 
-                    <div class="align-self-center">
-                        <img src="{{.Params.blogimage}}" class="rounded-m me-3" width="65">
-                        <span class="badge text-uppercase px-2 py-1 bg-highlight d-block me-3 mt-n3 rounded-m under-slider-btn">{{.Params.label}}</span>
-                    </div>
-
-                    <!--<div class="align-self-center">
-                        <h1 class="pe-3 font-40 font-900 opacity-30">01</h1>
-                    </div>-->
-
-
-
-                    <div class="align-self-center">
-                        <h4 class="mb-n1 font-15">{{ .Title }}</h4>
-                        <p class="font-10 opacity-50">{{ .PublishDate.Format "January 2, 2006" }}</p>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <i class="fa fa-play-circle fa-2x color-highlight"></i>
-                    </div>
-                </a>
-                {{ end }}
-        
-                
-            </div>
-        </div>
-    </div>
 {{ end }}

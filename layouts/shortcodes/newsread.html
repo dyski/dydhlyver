@@ -1,34 +1,36 @@
 {{.Inner}}
 <div class="mb-5">
+
 {{ if .Page.Params.cornish }}
   {{ $counter := 0 }}
   
   <div class="text-end collapse show" id="text{{ $counter }}">
   <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();" 
-  class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase" type="button" data-bs-toggle="collapse" 
+  class="btn btn-success me-1 mb-1" type="button" data-bs-toggle="collapse" 
   data-bs-target="#text{{ $counter }}" >START</button> 
-</div>
+  </div>
 
 
   {{ range .Page.Params.cornish }}
  
 <audio id="sound{{ $counter }}" src="https://cornish.app/audio/anwodhow/201206/{{ $counter }}.mp3" preload="auto"></audio>
 
-<div class="collapse" id="text{{ $counter }}" >
-    <div  onclick="document.getElementById('sound{{ $counter }}').play();">
-        
-            
-        
-                <p class="mb-3" data-bs-toggle="tooltip" title="{{ index $.Page.Params.english $counter }}">{{ index $.Page.Params.cornish $counter  | safeHTML }}</p>
-        
-        
+  <div class="collapse" id="text{{ $counter }}" >
+    
+    <div onclick="document.getElementById('sound{{ $counter }}').play();">
+      <p class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" 
+      title="{{ index $.Page.Params.english $counter }}">
+      {{ index $.Page.Params.cornish $counter  | safeHTML }}</p>  
     </div>  
     
-   
     {{ $counter = add $counter 1 }}
     <div class="text-end collapse show" id="text{{ $counter }}">
-    <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();"
-    class="btn scale-box btn-m my-5 btn-center-l rounded-l shadow-xl bg-highlight font-800 text-uppercase" type="button" data-bs-toggle="collapse" 
+    <button onclick="
+      document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('sound{{ $counter }}').play();
+      "
+    class="btn btn-success me-1 mb-1" 
+    type="button" data-bs-toggle="collapse" 
     data-bs-target="#text{{ $counter }}">Continue</button>
     </div>
   
@@ -37,5 +39,5 @@
 {{ end }}
 {{ end }}
 </div>
-<div class="divider divider-margins" id="end"></div>
+
 
