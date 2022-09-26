@@ -1,0 +1,118 @@
+{{ define "main" }}
+
+
+<div id="appCapsule">
+
+    <div class="section text-center">
+  
+        {{ with $image := resources.Get  "/img/undraw_faq_re_31cw.svg" }}
+  <img src="{{ .RelPermalink }}" alt="image" class="imaged w200">
+{{ end }}
+
+
+
+    </div>
+
+    <div class="section full">
+        <div class="section-title">Welcome to Frequently Asked Questions</div>
+        <div class="wide-block pt-2 pb-2">
+            Welcome to the frequently asked questions page. You can find the answer to your question here.
+        </div>
+    </div>
+
+
+    <div class="section full mt-2">
+        <div class="section-title">About Theme</div>
+
+        <div class="accordion" id="accordionExample1">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#accordion1">
+                        Is this PWA?
+                    </button>
+                </h2>
+                <div id="accordion1" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        Yes, Mobilekit is PWA ready html template. You can build mobile websites and progressive web
+                        apps with it.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#accordion2">
+                        What CSS framework this theme use?
+                    </button>
+                </h2>
+                <div id="accordion2" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        We are using Bootstrap 5.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#accordion3">
+                        What can i do with this template?
+                    </button>
+                </h2>
+                <div id="accordion3" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        You can make mobile websites or progressive web apps for mobile devices.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#accordion4">
+                        Is this WordPress theme?
+                    </button>
+                </h2>
+                <div id="accordion4" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+                    <div class="accordion-body">
+                        No. It is a html template. Mobilekit build with HTML, CSS, Javascript and some love.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="section full mt-2 mb-2">
+        <div class="section-title">About Theme</div>
+
+        <div class="accordion" id="accordionExample2">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#accordion1a">
+                        How can i contact to you?
+                    </button>
+                </h2>
+                <div id="accordion1a" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body">
+                        Feel free to contact us on <a
+                            href="https://themeforest.net/item/mobilekit-bootstrap-4-based-mobile-ui-kit-template/25384264/support"
+                            target="_blank">item support tab</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+            {{ .Content }}
+
+
+{{ end }}

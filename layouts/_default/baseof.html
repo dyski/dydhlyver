@@ -8,14 +8,14 @@
 
     {{- partial "preloader.html" . -}}
 
-    {{- partial "masthead.html" . -}}
+    <!--{{ if not .IsHome }}{{- partial "masthead.html" . -}}{{ end }}-->
 
   
      
   
       <!-- App Capsule -->
     
-      <div id="appCapsule" class="full-height">
+      
   
   
 
@@ -26,9 +26,9 @@
   
   
   
-      </div>
+      
       <!-- * App Capsule -->
-      {{- partial "footer-bar.html" . -}}
+      {{ if not .IsHome }}{{- partial "footer-bar.html" . -}}{{ end }}
    
     
     {{- partial "hidden.html" . -}}

@@ -1,10 +1,12 @@
   <!-- App Bottom Menu -->
 
 <div class="appBottomMenu">  
-    
-  {{ range .Site.Menus.main }}
+  {{ $current := . }}
 
-  <a href="{{ .URL }}" class="item" {{ if .Post }}data-bs-toggle="offcanvas"{{ end }}>
+  {{ range .Site.Menus.main }}
+  {{ $active := in $current.RelPermalink .URL }}
+
+  <a href="{{ .URL }}" class="item {{ if $active }}active{{ end }}" {{ if .Post }}data-bs-toggle="offcanvas"{{ end }}>
 
     <div class="col">
         <ion-icon name="{{ .Params.class }}"></ion-icon> 

@@ -2,7 +2,7 @@
 title: "Search"
 date: 2020-01-26T23:23:13Z
 draft: true
-layout: profile
+layout: faqpage
 name: Raymond
 position: Retail Assistant
 facebook: http://facebook.com/raymond.bridgewater

@@ -1,9 +1,9 @@
 {{ define "main" }}
-
+<div id="appCapsule">
 <div class="blog-post">
     <div class="mb-2">
 
-        {{ $wide := resources.Get "/img/sample/photo/wide1.jpg" }}
+        {{ $wide := resources.Get "/img/bbc800x400.jpg" }}
         
         <img src="{{ $wide.RelPermalink }}" alt="image" class="imaged square w-100">
     </div>
@@ -12,7 +12,7 @@
     <div class="post-header">
         <div>
             <a href="#">
-                {{ $ava := resources.Get "/img/sample/avatar/avatar1.jpg" }}
+                {{ $ava := resources.Get "/img/bbc800x400.jpg" }}
                 <img src="{{ $ava.RelPermalink }}" alt="avatar" class="imaged w24 rounded me-05">
                 BBC Radio
             </a>
@@ -25,7 +25,7 @@
 </div>
 
 
-    <div class="section mt-4">
+    <div class="section mt-4 mb-4">
         <button type="button" class="btn btn-outline-primary btn-block" data-bs-toggle="offcanvas"
             data-bs-target="#actionSheetShare">
             <ion-icon name="share-outline"></ion-icon>
@@ -34,4 +34,5 @@
     </div>
 
     <div id="end"></div>
+</div>
 {{ end }}

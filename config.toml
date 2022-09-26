@@ -45,9 +45,9 @@ title = 'Cornish Learn'
    class='chatbubble-ellipses-outline'
 
 [[menu.main]]
-  name = 'Search'
+  name = 'FAQ'
   pre = ''
-  url = '/search/'
+  url = '/faq/'
    weight = 4
    [menu.main.params]
    class='layers-outline'

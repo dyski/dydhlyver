@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+    <!-- App Header -->
+    <div class="appHeader no-border transparent">
+        <div class="left">
+        </div>
+        <div class="pageTitle">
+            {{ $logo := resources.Get "/img/logo.png" }}
+            <img src="{{ $logo.RelPermalink }}" alt="logo" class="logo">
+            
+        </div>
+        <div class="right">
+            <a href="home" class="headerButton text-secondary">
+                Skip
+            </a>
+        </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+
+        {{ $slider := resources.Get "/img/sample/photo/vector1.png" }}
+        <!-- carousel slider -->
+        <div class="carousel-slider splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide p-2">
+                        <img src="{{ $slider.RelPermalink }}" alt="alt" class="imaged w-100 square mb-4">
+                        <h2>Reusable components</h2>
+                        <p>Reusable components designed for the mobile interface and ready to use.</p>
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="{{ $slider.RelPermalink }}" alt="alt" class="imaged w-100 square mb-4">
+                        <h2>PWA Ready</h2>
+                        <p>It is a progressive web app. Add to home screen and use it like an app.</p>
+                    </li>
+                    <li class="splide__slide p-2">
+                        <img src="{{ $slider.RelPermalink }}" alt="alt" class="imaged w-100 square mb-4">
+                        <h2>Great for phones & tablets</h2>
+                        <p>Compatible with all mobile phones and tablet resolutions.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- * carousel slider -->
+
+        <div class="carousel-button-footer">
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" class="btn btn-secondary btn-lg btn-block goBack">Go Back</a>
+                </div>
+                <div class="col-6">
+                    <a href="home" class="btn btn-primary btn-lg btn-block">Get Started</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- * App Capsule -->
+
+        
+
+{{ end }}
