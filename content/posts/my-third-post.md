@@ -1,7 +1,7 @@
 ---
 title: "My third Post"
 date: 2022-01-26T23:11:13Z
-draft: true
+draft: false
 blogimage: "/images/pictures/18s.jpg"
 tags: ["foo", "bar"]
 label: "develop"

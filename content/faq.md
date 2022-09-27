@@ -1,14 +1,6 @@
 ---
 title: "Search"
-date: 2020-01-26T23:23:13Z
-draft: true
 layout: faqpage
-name: Raymond
-position: Retail Assistant
-facebook: http://facebook.com/raymond.bridgewater
-instagram:
-twitter:
-quote: Don't be nasty!
 
 ---
 
