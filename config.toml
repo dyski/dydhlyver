@@ -58,7 +58,7 @@ title = 'Cornish Learn'
   post = 'menu-settings'
   icon = 'menu-outline'
   pre = 'menu-settings'
-  url = "#sidebarPanel"
+  url = "#actionSheetQuick"
    weight = 5
 [menu.main.params]
    class='menu-outline'
