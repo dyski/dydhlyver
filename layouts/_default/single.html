@@ -1,13 +1,51 @@
 {{ define "main" }}
 
-                {{ .Title }}
+{{- partial "masthead.html" . -}}               
          
-            {{ range .Param "authors" }}{{ . }}{{ end }}
-            {{ .PublishDate.Format "January 2, 2006" }}
+            
+            
  
-                {{ partial "metadata.html" . }}
+                
   
-            {{ .Content }}
+        
 
+            <div id="appCapsule">
 
+                <div class="blog-post">
+                    <div class="mb-2">
+                        <img src="assets/img/sample/photo/wide1.jpg" alt="image" class="imaged square w-100">
+                    </div>
+                    <h1 class="title">{{ .Title }}</h1>
+        
+                    <div class="post-header">
+                        <div>
+                            <a href="#">
+                                <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w24 rounded me-05">
+                                {{ range .Param "authors" }}{{ . }}{{ end }}
+                            </a>
+                        </div>
+                        {{ .PublishDate.Format "January 2, 2006" }}
+                    </div>
+                    <div class="post-body">
+                        
+                        {{ .Content }}
+                        {{ partial "metadata.html" . }}
+                    </div>
+                </div>
+        
+        
+                <div class="section mt-4">
+                    <button type="button" class="btn btn-outline-primary btn-block" data-bs-toggle="offcanvas"
+                        data-bs-target="#actionSheetShare">
+                        <ion-icon name="share-outline"></ion-icon>
+                        Share This Post
+                    </button>
+                </div>
+        
+                <div class="divider mt-4 mb-3"></div>
+        
+                
+                
+        
+            </div>
 {{ end }}

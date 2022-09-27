@@ -1,4 +1,34 @@
 {{ define "main" }}
+{{- partial "masthead.html" . -}}
 
+        
+                <div id="appCapsule">
+
+                    
+            
+                    <div class="listview-title mt-2">Media Link Listview</div>
+                    <ul class="listview image-listview media mb-2">
+                        {{ range .Pages.ByPublishDate.Reverse }}
+                        <li>
+                            <a href="{{ .RelPermalink }}" class="item">
+                                <div class="imageWrapper">
+                                    <img src="{{.Params.blogimage}}" alt="image" class="imaged w64">
+                                </div>
+                                <div class="in">
+                                    <div>
+                                        {{ .Title }}
+                                        <div class="text-muted">{{ .PublishDate.Format "January 2, 2006" }}</div>
+                                    </div>
+                                    <span class="badge badge-primary">{{.Params.label}}</span>
+                                </div>
+                            </a>
+                        </li>
+                        {{ end }}
+                        
+                    </ul>
+            
+            
+                </div>
+            
 
 {{ end }}
