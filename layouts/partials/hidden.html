@@ -4,10 +4,11 @@
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Share with</h5>
     </div>
+    {{ $pageurl := .Permalink }}
     <div class="offcanvas-body">
         <ul class="action-button-list">
             <li>
-                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas">
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u={{ $pageurl }}');">
                     <span>
                         <ion-icon name="logo-facebook"></ion-icon>
                         Facebook
@@ -15,23 +16,25 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas">
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Twitter" onclick="window.open('http://twitter.com/intent/tweet?text={{.Title}}&url={{ $pageurl }}');">
                     <span>
                         <ion-icon name="logo-twitter"></ion-icon>
                         Twitter
                     </span>
                 </a>
             </li>
+            {{ if .Params.image }}
             <li>
-                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas">
+                    <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Pinterest" onclick="window.open('https://pinterest.com/pin/create/button/?url=&media={{ .Params.image }}&description=');">
                     <span>
-                        <ion-icon name="logo-instagram"></ion-icon>
-                        Instagram
+                        <ion-icon name="logo-pinterest"></ion-icon>
+                        Pinterest
                     </span>
                 </a>
             </li>
+            {{ end }}
             <li>
-                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas">
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url={{ $pageurl }}&title=&summary=&source=');">
                     <span>
                         <ion-icon name="logo-linkedin"></ion-icon>
                         Linkedin
@@ -50,28 +53,33 @@
     <div class="offcanvas-header">
         <h5 class="offcanvas-title">Quick Links</h5>
     </div>
+  
     <div class="offcanvas-body">
         <ul class="action-button-list">
             <li>
-                <a href="#" class="btn btn-list" data-bs-toggle="offcanvas" data-bs-target="#actionSheetMutate">
+                <a href="#" class="btn btn-list" data-bs-toggle="offcanvas" data-bs-target="#actionSheetMutate" >
                     <span>
-                        <ion-icon name="logo-facebook"></ion-icon>
-                        Muitation
+                        <ion-icon name="cog-outline"></ion-icon>
+                        
+                        Quick Muitation Table
                     </span>
                 </a>
 
                
             </li>
             <li>
-                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas">
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" >
                     <span>
-                        <ion-icon name="logo-twitter"></ion-icon>
-                        Twitter
+                        <ion-icon name="skull-outline"></ion-icon>
+                        link not woerking
                     </span>
                 </a>
             </li>
 
         </ul>
+
+     
+
     </div>
 </div>
 <!-- * Share Action Sheet -->
@@ -245,22 +253,22 @@
 
         <ul class="listview flush transparent no-line image-listview mt-2">
             <li>
-                <a href="index.html" class="item">
+                <a href="/slides/numbers" class="item">
                     <div class="icon-box bg-primary">
                         <ion-icon name="home-outline"></ion-icon>
                     </div>
                     <div class="in">
-                        Discover
+                        slides
                     </div>
                 </a>
             </li>
             <li>
-                <a href="app-components.html" class="item">
+                <a href="/annwd" class="item">
                     <div class="icon-box bg-primary">
                         <ion-icon name="cube-outline"></ion-icon>
                     </div>
                     <div class="in">
-                        Components
+                        anwd
                     </div>
                 </a>
             </li>

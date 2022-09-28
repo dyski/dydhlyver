@@ -2,12 +2,17 @@ baseURL = 'https://cornish.app/'
 languageCode = 'en-us'
 title = 'Cornish Learn'
 
+
 [params]
+description = 'diddlydo do'
+images = ['img/icon/512x512.png']
 
 [taxonomies]
 	author = "authors"
 	category = "categories"
   tags = "tags"
+  news = "news"
+  posts = "posts"
 
 [outputFormats]
     [outputFormats.manifest]
@@ -40,7 +45,7 @@ title = 'Cornish Learn'
 [[menu.main]]
   name = 'News'
   pre = ''
-  url = '/bbcnews/'
+  url = '/news/'
    weight = 3
   [menu.main.params]
    class='chatbubble-ellipses-outline'

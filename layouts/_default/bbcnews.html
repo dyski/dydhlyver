@@ -4,11 +4,13 @@
 <div class="blog-post">
     <div class="mb-2">
 
-        {{ $wide := resources.Get "/img/bbc800x400.jpg" }}
+    {{ $wide := resources.Get "/img/bbc800x400.jpg" }}
         
         <img src="{{ $wide.RelPermalink }}" alt="image" class="imaged square w-100">
     </div>
     <h1 class="title">{{$.Page.Params.title}}</h1>
+
+    <a href="{{$.Page.Params.audio}}"> link to mp3</a>
 
     <div class="post-header">
         <div>

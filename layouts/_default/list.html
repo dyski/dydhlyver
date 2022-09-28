@@ -5,13 +5,12 @@
                 <div id="appCapsule">
 
                     
-            
-                    <div class="listview-title mt-2">Media Link Listview</div>
                     <ul class="listview image-listview media mb-2">
                         {{ range .Pages.ByPublishDate.Reverse }}
                         <li>
                             <a href="{{ .RelPermalink }}" class="item">
                                 <div class="imageWrapper">
+                                    
                                     <img src="{{.Params.blogimage}}" alt="image" class="imaged w64">
                                 </div>
                                 <div class="in">
@@ -27,7 +26,7 @@
                         
                     </ul>
             
-            
+                    {{ .Content }}
                 </div>
             
 

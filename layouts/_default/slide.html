@@ -1,0 +1,151 @@
+{{ define "main" }}
+
+    <!-- App Header -->
+    <div class="appHeader no-border transparent">
+        <div class="left">
+        </div>
+        <div class="pageTitle">
+            {{ $logo := resources.Get "/img/logo.png" }}
+            <img src="{{ $logo.RelPermalink }}" alt="logo" class="logo">
+            
+        </div>
+        <div class="right">
+            <a href="home" class="headerButton text-secondary">
+                Skip
+            </a>
+        </div>
+    </div>
+    <!-- * App Header -->
+
+    <!-- App Capsule -->
+    <div id="appCapsule">
+        <div class="header-large-title">
+            <h1 class="title">Discover</h1>
+            <h4 class="subtitle">Welcome to Mobilekit</h4>
+        </div>
+        {{ $caroimg := resources.Get "/img/sample/photo/vertical3.jpg" }}
+        <div class="section full mt-3 mb-3">
+            
+            <!-- carousel single -->
+            <div class="carousel-single splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-2">Progressive web app ready</h4>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="#" class="btn btn-secondary btn-lg btn-block goBack">Go Back</a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="home" class="btn btn-primary btn-lg btn-block">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Progressive web app ready</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Progressive web app ready</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- * carousel single -->
+        </div>
+
+
+
+
+        <div class="section full mt-3 mb-3">
+
+            <!-- carousel multiple -->
+            
+    
+            <div class="carousel-multiple splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Progressive web app ready</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Reusable components</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Great for phones & tablets</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Change the styles in sass</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Sketch source file included</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">RTL (Right to Left) Support</h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card">
+                                <img src="{{ $caroimg.RelPermalink }}" class="card-img-top" alt="image">
+                                <div class="card-body pt-2">
+                                    <h4 class="mb-0">Written with a code structure</h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- * carousel multiple -->
+    
+        </div>
+
+    </div>
+    <!-- * App Capsule -->
+
+        
+
+{{ end }}

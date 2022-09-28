@@ -1,6 +1,8 @@
 {{.Inner}}
 <div class="mb-5">
 
+
+
 {{ if .Page.Params.cornish }}
   {{ $counter := 0 }}
   
@@ -13,7 +15,7 @@
 
   {{ range .Page.Params.cornish }}
  
-<audio id="sound{{ $counter }}" src="https://cornish.app/audio/anwodhow/201206/{{ $counter }}.mp3" preload="auto"></audio>
+  <audio id="sound{{ $counter }}" src="https://cornish.app/audio/anwodhow/{{ $.Page.Params.folder }}/{{ $counter }}.mp3" preload="auto"></audio>
 
   <div class="collapse" id="text{{ $counter }}" >
     
