@@ -10,7 +10,9 @@
             <h1 class="title">Discover</h1>
             <h4 class="subtitle">Welcome to Mobilekit</h4>
         </div>
-        {{ $caroimg := resources.Get "/img/sample/photo/product1.jpg" }}
+        {{ $caroimg := resources.Get "/img/sample/photo/wide1.jpg" }}
+        {{ $remote := resources.GetRemote "https://unsplash.com/photos/OBbliBNuJlk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fGxpc3RlbmluZyUyMGhlYWRwaG9uZXN8ZW58MHwwfHx8MTY2NDM5ODU0Mw&force=true&w=1920" }}
+
         <div class="section full mt-3 mb-3">
             
 
@@ -22,12 +24,12 @@
                         <ul class="splide__list">
                             <li class="splide__slide">
                                 <div class="card">
-                                    <img src="{{ $caroimg.RelPermalink }}" alt="alt" class="card-img-top">
+                                    <img src="{{ $remote.RelPermalink }}" alt="alt" class="card-img-top">
                                     <div class="card-body">
-                                        <h6 class="card-subtitle">Discover</h6>
-                                        <h5 class="card-title">Pel</h5>
+                                        <h6 class="card-subtitle">Listening</h6>
+                                        <h5 class="card-title">1st Grade</h5>
                                         <p class="card-text">
-                                            ball pel n.f pelyow n.pl 
+                                            Kesva listening exams 
                                         </p>
                                         <a href="app-pages.html" class="btn btn-primary">
                                             <ion-icon name="volume-high-outline"></ion-icon>
