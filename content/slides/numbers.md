@@ -11,7 +11,7 @@ layout: blank
 {{< slider typeSorM="single">}}
 
     {{< slide_card 
-        img="/img/sample/photo/1.jpg" 
+        img="/img/numbers/one.jpg" 
         subtitle="One" 
         title="Onan" 
         icon="cube-outline" 
@@ -20,7 +20,8 @@ layout: blank
     >}}
 
     {{< slide_card 
-        img="/img/sample/photo/wide1.jpg" 
+
+        img="/img/numbers/two.jpg" 
         subtitle="Di2222r" 
         title="Dew" 
         icon="cube-outline" 
