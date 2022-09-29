@@ -7,7 +7,7 @@ label: "develop"
 layout: single
 authors: ["Raymond"]
 audio: []
-images: []
+images: ['']
 series: []
 tags: []
 videos: []

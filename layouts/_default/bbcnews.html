@@ -1,31 +1,30 @@
 {{ define "main" }}
 {{- partial "masthead.html" . -}}
 <div id="appCapsule">
-<div class="blog-post">
-    <div class="mb-2">
-
-    {{ $wide := resources.Get "/img/bbc800x400.jpg" }}
-        
-        <img src="{{ $wide.RelPermalink }}" alt="image" class="imaged square w-100">
-    </div>
-    <h1 class="title">{{$.Page.Params.title}}</h1>
-
-    <a href="{{$.Page.Params.audio}}"> link to mp3</a>
-
-    <div class="post-header">
-        <div>
-            <a href="#">
-                {{ $ava := resources.Get "/img/bbc800x400.jpg" }}
-                <img src="{{ $ava.RelPermalink }}" alt="avatar" class="imaged w24 rounded me-05">
-                BBC Radio
-            </a>
+    <div class="blog-post">
+        <div class="mb-2">
+            
+            {{$path := index $.Page.Params.images 0}}
+            {{ $imgsrc := resources.Get $path }}        
+            <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged square w-100">
         </div>
-        Jun 11, 2020
+        
+        <h1 class="title">{{$.Page.Params.title}}</h1>
+
+        <div class="post-header">
+            <div>
+                <a href="#">
+                    <img src="{{ $imgsrc.RelPermalink }}" alt="avatar" class="imaged w24 rounded me-05">
+                    {{index $.Page.Params.authors 0 }}
+                </a>
+            </div>
+            {{ .PublishDate.Format "January 2, 2006" }}
+        </div>
+        
+        <div class="post-body">
+                {{ .Content }}
+        </div>
     </div>
-    <div class="post-body">
-            {{ .Content }}
-    </div>
-</div>
 
 
     <div class="section mt-4 mb-4">

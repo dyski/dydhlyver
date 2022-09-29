@@ -6,6 +6,7 @@ blogimage: ""
 layout: single
 tags: ["foo", "bar"]
 label: "develop"
+images: ['/img/numbers/two.jpg']
 ---
 
 

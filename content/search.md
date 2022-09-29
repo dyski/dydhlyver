@@ -2,8 +2,9 @@
 title: "Search"
 date: 2020-01-26T23:23:13Z
 draft: true
-layout: home
+layout: blank
 ---
+{{< pagetitle title="Slider demo" subtitle="a little more info">}}
 
 Lorem search ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
 incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor 

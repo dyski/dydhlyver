@@ -3,14 +3,13 @@ title: "An Nowodhow - 06/12/2020"
 layout: bbcnews
 description: "A 5 minute review of the week's news in Cornish."
 images: ['/img/bbc800x400.jpg']
-blogimage: '/img/bbc800x400.jpg'
 date: 2020-12-06T14:00:00Z
 label: "news"
-authors: ['Raymond']
-audio: "20-12-06.mp3"
-pdf: "An Nowodhow 2020 12 06 skrif.pdf"
+authors: ['Steve Penhaligon']
+audio: ""
 tags: []
 videos: []
+folder: "/audio/anwodhow/201206/"
 
 draft: false
 
@@ -79,6 +78,4 @@ english: [
 
 
 ---
-{{< newsread >}}
-
-{{< /newsread >}}
+{{< read >}}

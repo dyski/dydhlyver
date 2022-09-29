@@ -8,7 +8,7 @@ layout: single
 slug: 
 authors: ["Raymond"]
 audio: []
-images: []
+images: ['/img/numbers/one.jpg']
 series: []
 tags: []
 videos: []
