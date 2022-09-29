@@ -2,7 +2,8 @@
     <div class="card">
         {{ $image := .Get "img" }}
         {{ $icon := .Get "icon" }}
-        <img src="{{ $image }}" class="card-img-top" alt="image">
+        {{ $imglink := resources.Get $image }}
+        <img src="{{ $imglink.RelPermalink }}" class="card-img-top" alt="image">
         <div class="card-body">
             <h6 class="card-subtitle">{{ .Get "subtitle" }}</h6>
             <h5 class="card-title">{{ .Get "title" }}</h5>
