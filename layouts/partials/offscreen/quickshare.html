@@ -1,0 +1,55 @@
+  <!-- Share Action Sheet -->
+  <div class="offcanvas offcanvas-bottom action-sheet inset" tabindex="-1" id="actionSheetShare">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Share with</h5>
+    </div>
+    {{ $pageurl := .Permalink }}
+    <div class="offcanvas-body">
+        <ul class="action-button-list">
+            <li>
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Facebook" onclick="window.open('http://www.facebook.com/share.php?u={{ $pageurl }}');">
+                    <span>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        Facebook
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Twitter" onclick="window.open('http://twitter.com/intent/tweet?text={{.Title}}&url={{ $pageurl }}');">
+                    <span>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                        Twitter
+                    </span>
+                </a>
+            </li>
+            {{ if .Params.image }}
+            <li>
+                    <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Pinterest" onclick="window.open('https://pinterest.com/pin/create/button/?url=&media={{ .Params.image }}&description=');">
+                    <span>
+                        <ion-icon name="logo-pinterest"></ion-icon>
+                        Pinterest
+                    </span>
+                </a>
+            </li>
+            {{ end }}
+            <li>
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this through Email" onclick="window.open('mailto:?&body={{ $pageurl }}');">
+                    <span>
+                        <ion-icon name="mail-outline"></ion-icon>
+                        Email
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Linkedin" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url={{ $pageurl }}&title=&summary=&source=');">
+                    <span>
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                        Linkedin
+                    </span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<!-- * Share Action Sheet -->

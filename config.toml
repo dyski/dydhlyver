@@ -51,19 +51,19 @@ images = ['img/icon/512x512.png']
    class='chatbubble-ellipses-outline'
 
 [[menu.main]]
-  name = 'FAQ'
+  name = 'Quick'
+  post = 'yes'
   pre = ''
-  url = '/faq/'
+  url = '#actionSheetQuick'
    weight = 4
    [menu.main.params]
    class='layers-outline'
 
 [[menu.main]]
   name = 'Settings'
-  post = 'menu-settings'
-  icon = 'menu-outline'
-  pre = 'menu-settings'
-  url = "#actionSheetQuick"
+  post = 'yes'
+  pre = ''
+  url = "#sidebarPanel"
    weight = 5
 [menu.main.params]
    class='menu-outline'

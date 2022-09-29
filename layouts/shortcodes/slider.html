@@ -1,0 +1,10 @@
+<div class="section full mt-3 mb-3">  
+    {{ $type := .Get "typeSorM" }}
+    <div class="carousel-{{ $type }} splide">
+        <div class="splide__track">
+            <ul class="splide__list"> 
+            {{.Inner}}  
+            </ul>
+        </div>
+    </div>
+</div>

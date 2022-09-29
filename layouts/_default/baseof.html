@@ -2,36 +2,22 @@
 <html lang="en">
   {{- partial "head.html" . -}}
 
-
-
   <body>
 
     {{- partial "preloader.html" . -}}
-
-    <!--{{ if not .IsHome }}{{- partial "masthead.html" . -}}{{ end }}-->
-
-  
      
-  
       <!-- App Capsule -->
     
-      
-  
-  
-
-                {{- block "main" . }}{{- end }}
-
-
-
-  
-  
-  
+        {{- block "main" . }}{{- end }}
       
       <!-- * App Capsule -->
+      
       {{ if not .IsHome }}{{- partial "footer-bar.html" . -}}{{ end }}
    
-    
-    {{- partial "hidden.html" . -}}
+    {{- partial "offscreen/quickshare.html" . -}}
+    {{- partial "offscreen/quicklinks.html" . -}}
+    {{- partial "offscreen/mutation.html" . -}}
+    {{- partial "offscreen/sidebar.html" . -}}
     
     {{ if .IsHome }}{{- partial "install.html" . -}}{{ end }}
 
