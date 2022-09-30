@@ -7,9 +7,9 @@
         {{ range .Pages.ByPublishDate.Reverse }}
         <li>
             <a href="{{ .RelPermalink }}" class="item">
-                {{ with index .Params.images 0 }}
+                {{ with .Params.images  }}
                 <div class="imageWrapper">                    
-                    <img src="{{ . }}" alt="image" class="imaged w64">
+                    <img src="{{ index . 0 }}" alt="image" class="imaged w64">
                 </div>
                 {{ end }}
                 <div class="in">
