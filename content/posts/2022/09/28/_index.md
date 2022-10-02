@@ -7,7 +7,7 @@ label: "develop"
 layout: single
 authors: ["Raymond"]
 audio: []
-images: ['']
+images: ['/img/numbers/bill_clinton.jpg']
 series: []
 tags: []
 videos: []
