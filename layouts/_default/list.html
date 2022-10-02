@@ -7,10 +7,12 @@
         {{ range .Pages.ByPublishDate.Reverse }}
         <li>
             <a href="{{ .RelPermalink }}" class="item">
-                {{ with .Params.images  }}
                 
+                {{ with index .Params.images 0 }}
+                {{$path := . }}
+                {{ $imgsrc := resources.Get $path }}
                 <div class="imageWrapper">                    
-                    <img src="{{ index . 0 }}" alt="image" class="imaged w64">
+                    <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged w64">
                 </div>
                 {{ end }}
                 <div class="in">

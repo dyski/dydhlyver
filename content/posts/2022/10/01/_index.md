@@ -10,6 +10,7 @@ audio: []
 tags: []
 videos: []
 folder: ""
+thumbnail: "/img/numbers/books.jpg"
 
 draft: false
 ---
