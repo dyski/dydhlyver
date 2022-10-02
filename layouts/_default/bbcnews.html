@@ -2,19 +2,20 @@
 {{- partial "masthead.html" . -}}
 <div id="appCapsule">
     <div class="blog-post">
+        
         <div class="mb-2">
             
             {{$path := index $.Page.Params.images 0}}
             {{ $imgsrc := resources.Get $path }}        
-            <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged square w-100">
+            <img src="{{ ($imgsrc.Fill "800x400 q100 Center").RelPermalink }}" alt="image" class="imaged square w-100">
         </div>
-        
+      
         <h1 class="title">{{$.Page.Params.title}}</h1>
 
         <div class="post-header">
             <div>
                 <a href="#">
-                    <img src="{{ $imgsrc.RelPermalink }}" alt="avatar" class="imaged w24 rounded me-05">
+                    <img src="{{ ($imgsrc.Fill "24x24 q100 Center").RelPermalink }}" alt="avatar" class="imaged w24 rounded me-05">
                     {{index $.Page.Params.authors 0 }}
                 </a>
             </div>
