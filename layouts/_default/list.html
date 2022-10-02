@@ -8,8 +8,8 @@
         <li>
             <a href="{{ .RelPermalink }}" class="item">
                 
-                {{ with index .Params.images 0 }}
-                {{$path := . }}
+                {{ with .Params.images }}
+                {{$path := index . 0 }}
                 {{ $imgsrc := resources.Get $path }}
                 <div class="imageWrapper">                    
                     <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged w64">
