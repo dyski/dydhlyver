@@ -2,7 +2,7 @@
 title: "Colours"
 layout: colours
 description: "cornish colours ext"
-images: ['/img/numbers/one.jpg']
+images: ['/img/numbers/books.jpg']
 date: 2022-10-03T14:00:00Z
 label: "test"
 authors: ['Raymond']
