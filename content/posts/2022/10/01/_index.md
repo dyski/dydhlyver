@@ -2,7 +2,7 @@
 title: "Preterite or imperfect"
 layout: single
 description: "Preterite or imperfect"
-images: ['/img/numbers/books.jpg', '/img/numbers/one.jpg']
+images: ['/img/numbers/bill_clinton.jpg', '/img/numbers/one.jpg']
 date: 2022-10-01T14:00:00Z
 label: "guide"
 authors: ['Raymond']
@@ -10,10 +10,7 @@ audio: []
 tags: []
 videos: []
 folder: ""
-thumbnail: "/img/numbers/books.jpg"
 
 draft: false
 ---
-
-
 {{< timeline >}}
