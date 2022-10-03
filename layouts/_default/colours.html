@@ -3,9 +3,14 @@
 
 
 
+
+
+
+
+
     <!-- App Capsule -->
     <div id="appCapsule" >
-    
+      {{ .Content }}
 
       {{ range $elem_index, $elem_val := .Site.Data.fullcol }}
       {{ range where $.Site.Data.dict "english" $elem_val.name }}
@@ -26,18 +31,6 @@
    {{ end }}
    {{ end }}
 
-
-    
-
-         
-        {{ $word := "tomato"}}
-
-
-
-
-
-
-        {{ .Content }}
 
 
 
