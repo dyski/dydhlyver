@@ -1,0 +1,27 @@
+<div class="section mt-3 mb-3">
+      
+    
+
+
+    {{ $counter := 0 }}
+
+    
+
+    {{ range .Site.Data.winnie.cornish }}
+  
+
+
+  
+
+    <p class="mb-1" data-bs-toggle="tooltip" data-bs-placement="top" 
+    title="{{ index $.Site.Data.winnie.english $counter }}">
+    {{ index $.Site.Data.winnie.cornish $counter  | safeHTML }}</p>  
+    
+  
+  {{ $counter = add $counter 1 }}
+
+
+
+    
+{{ end }}
+</div>
