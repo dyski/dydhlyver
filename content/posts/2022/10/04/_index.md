@@ -14,5 +14,6 @@ videos: []
 
 draft: false
 ---
+{{< pagetitle >}}
 {{< svgpola col="wheat" text="Gwaneth">}}
 
