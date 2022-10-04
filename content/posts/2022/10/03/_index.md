@@ -15,6 +15,6 @@ draft: false
 ---
 
 
-{{< pagetitle title=".Title" subtitle=".description">}}
+{{< pagetitle >}}
 
 
