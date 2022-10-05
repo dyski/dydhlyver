@@ -15,5 +15,14 @@ videos: []
 draft: false
 ---
 {{< pagetitle >}}
-{{< svgpola col="wheat" text="Gwaneth">}}
+
+
+{{< slider typeSorM="single">}}
+{{< slide_svg col="wheat" text="hi">}}
+{{< slide_svg col="wheat" text="again">}}
+
+{{< /slider >}}
+
+
+{{< svgpola col="wheat" text=" ">}}
 
