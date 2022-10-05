@@ -17,12 +17,12 @@ draft: false
 {{< pagetitle >}}
 
 
-{{< slider typeSorM="single">}}
+{{< slider typeSorM="multiple">}}
 {{< slide_svg col="wheat" text="hi">}}
 {{< slide_svg col="wheat" text="again">}}
 
 {{< /slider >}}
 
 
-{{< svgpola col="wheat" text=" ">}}
+{{< svgpola col="wheat" text="hjhj ">}}
 
