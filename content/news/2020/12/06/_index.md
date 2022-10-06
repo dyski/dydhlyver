@@ -9,7 +9,7 @@ authors: ['Steve Penhaligon']
 audio: ""
 tags: []
 videos: []
-folder: "/audio/anwodhow/201206/"
+folder: "/audio/annowodhow/201206/"
 
 draft: false
 
