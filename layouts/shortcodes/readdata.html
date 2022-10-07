@@ -5,7 +5,7 @@
 {{ if .Page.Params.data }}
                                       
   {{ $counter := 0 }}
-  {{ $dir :=  .Page.Params.data }}
+
 
   
   <div class="text-end collapse show" id="text{{ $counter }}">
@@ -16,14 +16,16 @@
 
 
 
-{{ range ( index (index .Site.Data.annowodhow .Page.Params.data) "cornish" ) }}
+{{ range ( index (index .Site.Data.annowodhow $.Page.Params.data) "cornish" ) }}
 
 
 {{ if eq $.Page.Params.withaudio true }}
+   {{ $dir :=  $.Page.Params.data }}
   {{ $path := print "/audio/annowodhow/" $dir "/" $counter ".mp3"}}
-  {{ $sndlink := resources.Get $path }}
-  <audio id="sound{{ $counter }}" src="{{ $sndlink.RelPermalink }}" preload="auto"></audio>
 
+  {{ $sndlink := resources.Get $path }}
+  <audio id="sound{{ $counter }}" src="{{$path}}" preload="auto"></audio>
+  
  {{ end }}
   <div class="collapse" id="text{{ $counter }}" >
     
