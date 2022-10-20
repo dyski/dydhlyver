@@ -1,0 +1,20 @@
+<li class="splide__slide">
+   
+    {{ $image := .Get "img" }}
+    {{ $icon := .Get "icon" }}
+    {{ $imglink := resources.Get $image }}
+
+<div class="card product-card">       
+<div class="card-body">
+            <img src="{{ $imglink.RelPermalink }}" class="image" alt="image">
+            <h2 class="title">{{ .Get "title" }}</h2>
+            <p class="text">{{ .Get "bodytext"}} </p>
+            <!--<a href="app-components.html" class="btn btn-primary">
+            <ion-icon name="{{ $icon }}" role="img" class="md hydrated" aria-label="cube outline"></ion-icon>
+            {{ .Get "linktext" }}
+            </a>-->
+            <a href="#" class="btn btn-sm btn-primary btn-block">ADD TO CART</a>
+        </div>
+    </div>
+</li>
+
