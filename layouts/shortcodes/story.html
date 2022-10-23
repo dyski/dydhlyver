@@ -2,16 +2,31 @@
 {{ $icon := .Get "icon" }}
 {{ $target := .Get "target" }}
 
+
 {{ $imglink := resources.Get $image }}
 {{ $imglink:= $imglink.Fill "1080x1920 center" }}
 {{ $imgicon := resources.Get $icon  }}
 {{ $imgicon:= $imgicon.Fill "64x64 center" }}
 
+
+
+
 <div class="modal fade stories" id="{{ $target }}" data-bs-backdrop="static" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="story-image">
-                <img src="{{ $imglink.RelPermalink }}" alt="image">
+
+                {{ with .Get "video" }}
+                {{ $vidlink := resources.Get .  }}
+                <video width="1080" height="1920" controls="false" autoplay loop>
+                    <source src="{{ $vidlink.RelPermalink }}" type="video/mp4" />
+                </video>
+  					{{ else }}
+                    
+  					<img src="{{ $imglink.RelPermalink }}" alt="image">
+  					{{ end }}
+
+
             </div>
             <div class="modal-header">
                 <a href="#" class="profile-detail">
@@ -22,7 +37,7 @@
                 </div>
                 </a>
                 <a href="#" data-bs-dismiss="modal" class="close-stories">
-                    <ion-icon name="close"></ion-icon>`
+                    <ion-icon name="close"></ion-icon>
                 </a>
             </div>
             <div class="modal-body">
