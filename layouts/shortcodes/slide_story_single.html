@@ -1,0 +1,14 @@
+
+    {{ $image := .Get "img" }}
+    {{ $target := .Get "target" }}
+    {{ $delay := .Get "delay" }}
+
+{{ $imgicon := resources.Get $image  }}
+{{ $imgicon:= $imgicon.Fill "64x64 center" }}
+
+    <li class="splide__slide is-active is-visible" id="splide01-{{ $target }}" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="{{ $delay }}" data-bs-target="#{{ $target }}">
+            <img src="{{ $imgicon.RelPermalink }}" alt="altsquare" class="imaged w-100 rounded">
+        </a>
+        
+    </li>

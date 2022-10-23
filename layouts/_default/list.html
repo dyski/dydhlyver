@@ -11,8 +11,11 @@
                 {{ with .Params.images }}
                 {{$path := index . 0 }}
                 {{ $imgsrc := resources.Get $path }}
+                {{ $imgsrc:= $imgsrc.Fill "64x64 center" }}
+
+
                 <div class="imageWrapper">                    
-                    <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged w64">
+                    <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged w32">
                 </div>
                 {{ end }}
                 <div class="in">

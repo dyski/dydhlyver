@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $caroimg := resources.Get "/img/sample/photo/d1.jpg" }}
+
 
 <div class="appHeader bg-primary scrolled">
     <div class="left">
@@ -16,6 +18,9 @@
     </div>
 </div>
 
+
+
+
     
 <div id="appCapsule">
 
@@ -24,10 +29,14 @@
         <h4 class="subtitle">Welcome to Mobilekit</h4>
     </div>
 
+
+
+    {{- partial "stories.html" . -}}
+
     <div class="section full mt-3 mb-3">
 
         <!-- carousel multiple -->
-        {{ $caroimg := resources.Get "/img/sample/photo/d1.jpg" }}
+        
 
         <div class="carousel-multiple splide">
             <div class="splide__track">

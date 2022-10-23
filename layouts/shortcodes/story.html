@@ -1,0 +1,38 @@
+{{ $image := .Get "img" }}
+{{ $icon := .Get "icon" }}
+{{ $target := .Get "target" }}
+
+{{ $imglink := resources.Get $image }}
+{{ $imglink:= $imglink.Fill "1080x1920 center" }}
+{{ $imgicon := resources.Get $icon  }}
+{{ $imgicon:= $imgicon.Fill "64x64 center" }}
+
+<div class="modal fade stories" id="{{ $target }}" data-bs-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="story-image">
+                <img src="{{ $imglink.RelPermalink }}" alt="image">
+            </div>
+            <div class="modal-header">
+                <a href="#" class="profile-detail">
+                <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="imaged w36 rounded me-1">
+                <div>
+                    <h4>{{ .Get "author" }}</h4>
+                    <span class="text-muted">{{ .Get "time" }}</span>
+                </div>
+                </a>
+                <a href="#" data-bs-dismiss="modal" class="close-stories">
+                    <ion-icon name="close"></ion-icon>`
+                </a>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h1>{{ .Get "title" }}</h1>
+                    <p>{{ .Get "text" }}</p>
+                    <a href="#" class="btn btn-primary">{{ .Get "button" }}</a>
+                </div>
+                <a href="#" class="fixed-btn btn btn-primary">{{ .Get "fixbtn" }}</a>
+            </div>
+        </div>
+    </div>
+</div>

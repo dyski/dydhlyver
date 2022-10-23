@@ -1,0 +1,247 @@
+
+{{ $caroimg2 := resources.Get "/img/sample/photo/1.jpg" }}
+{{ $caroimg3 := resources.Get "/img/sample/photo/vertical1.jpg" }}
+{{ $video := resources.Get "/img/sample/test.mp4" }}
+
+<div class="section full mt-3">
+    <div class="section-title">Story Block</div>
+    <div class="wide-block p-0 pt-2 pb-2">
+
+        <!-- story-block -->
+        <div class="story-block splide splide--slide splide--ltr splide--draggable is-active" id="splide01" style="visibility: visible;">
+            <div class="splide__track" id="splide01-track" style="padding-left: 16px; padding-right: 16px;">
+                <ul class="splide__list" id="splide01-list" style="transform: translateX(0px);">
+                    <li class="splide__slide is-active is-visible" id="splide01-slide01" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="5000" data-bs-target="#StoryDefault">
+                            <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                        </a>
+                    </li>
+                    <li class="splide__slide is-visible" id="splide01-slide02" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="5000" data-bs-target="#StoryAutoClose">
+                            <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                        </a>
+                    </li>
+                    <li class="splide__slide seen is-visible" id="splide01-slide03" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="5000" data-bs-target="#StorywithText">
+                            <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                        </a>
+                    </li>
+                    <li class="splide__slide seen is-visible" id="splide01-slide04" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="5000" data-bs-target="#StorywithButton">
+                            <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                        </a>
+                    </li>
+                    <li class="splide__slide passive is-visible" id="splide01-slide05" aria-hidden="false" tabindex="0" style="margin-right: 16px; width: 83px;">
+                        <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                    </li>
+                    <li class="splide__slide passive" id="splide01-slide06" style="margin-right: 16px; width: 83px;">
+                        <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                    </li>
+                    <li class="splide__slide passive" id="splide01-slide07" style="margin-right: 16px; width: 83px;">
+                        <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                    </li>
+                    <li class="splide__slide passive" id="splide01-slide08" style="margin-right: 16px; width: 83px;">
+                        <img src="{{ $caroimg2.RelPermalink }}" alt="alt" class="imaged w-100 rounded">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- * story-block -->
+
+    </div>
+</div>
+
+
+
+
+<div class="section full mt-3 mb-3">
+    <div class="section-title">Examples</div>
+    <ul class="listview image-listview text">
+        <li>
+            <a href="#" class="item" data-bs-toggle="modal" data-component="stories" data-bs-target="#StoryDefault">
+                <div class="in">
+                    <div>Default</div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="item" data-bs-toggle="modal" data-component="stories" data-time="5000" data-bs-target="#StoryAutoClose">
+                <div class="in">
+                    <div>Auto Close (5 secs)</div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="item" data-bs-toggle="modal" data-component="stories" data-bs-target="#StorywithText">
+                <div class="in">
+                    <div>with Text</div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="item" data-bs-toggle="modal" data-component="stories" data-bs-target="#StorywithButton">
+                <div class="in">
+                    <div>with Button</div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="item" data-bs-toggle="modal" data-component="stories" data-bs-target="#StorywithFixedButton">
+                <div class="in">
+                    <div>with Fixed Button</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<!-- Story Default -->
+<div class="modal fade stories" id="StoryDefault" data-bs-backdrop="static" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <!-- <div class="story-bar"></div> -->
+    <div class="story-image">
+            <video width="1080" height="1920" controls="false" autoplay="autoplay">
+                <source src="{{ $video.RelPermalink  }}" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+    <div class="modal-header">
+        <a href="#" class="profile-detail">
+            <img src="{{ $caroimg2.RelPermalink }}" alt="avatar"
+                class="imaged w36 rounded me-1">
+            <div>
+                <h4>Alberto Raya</h4>
+                <span class="text-muted">5 minutes ago</span>
+            </div>
+        </a>
+        <a href="#" data-bs-dismiss="modal" class="close-stories">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </div>
+    <div class="modal-body"></div>
+</div>
+</div>
+</div>
+<!-- * Story Default  -->
+
+<!-- Story Auto Close -->
+<div class="modal fade stories" id="StoryAutoClose" data-bs-backdrop="static" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <!-- <div class="story-bar"></div> -->
+    <div class="story-image">
+        <img src="assets/img/sample/photo/vertical2.jpg" alt="image">
+    </div>
+    <div class="modal-header">
+        <a href="#" class="profile-detail">
+            <img src="{{ $caroimg2.RelPermalink }}" alt="avatar"
+                class="imaged w36 rounded me-1">
+            <div>
+                <h4>Sophie Asveld</h4>
+                <span class="text-muted">5 minutes ago</span>
+            </div>
+        </a>
+        <a href="#" data-bs-dismiss="modal" class="close-stories">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </div>
+    <div class="modal-body"></div>
+</div>
+</div>
+</div>
+<!-- * Story Auto Close  -->
+
+<!-- Story with Text -->
+<div class="modal fade stories" id="StorywithText" data-bs-backdrop="static" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="story-image">
+        <img src="assets/img/sample/photo/vertical3.jpg" alt="image">
+    </div>
+    <div class="modal-header">
+        <a href="#" class="profile-detail">
+            <img src="{{ $caroimg2.RelPermalink }}" alt="avatar"
+                class="imaged w36 rounded me-1">
+            <div>
+                <h4>Nick Evans</h4>
+                <span class="text-muted">5 minutes ago</span>
+            </div>
+        </a>
+        <a href="#" data-bs-dismiss="modal" class="close-stories">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div>
+            <h1>Another Title Here</h1>
+            <p>This is simple text for the story</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- * Story with Text  -->
+
+<!-- Story with Button -->
+<div class="modal fade stories" id="StorywithButton" data-bs-backdrop="static" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="story-image">
+        <img src="assets/img/sample/photo/vertical4.jpg" alt="image">
+    </div>
+    <div class="modal-header">
+        <a href="#" class="profile-detail">
+            <img src="{{ $caroimg2.RelPermalink }}" alt="avatar"
+                class="imaged w36 rounded me-1">
+            <div>
+                <h4>Ashley Graham</h4>
+                <span class="text-muted">5 minutes ago</span>
+            </div>
+        </a>
+        <a href="#" data-bs-dismiss="modal" class="close-stories">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </div>
+    <div class="modal-body">
+        <div>
+            <h1>Another Title Here</h1>
+            <p>This is simple text for the story</p>
+            <a href="#" class="btn btn-primary">Do something</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- * Story with Button  -->
+
+
+<!-- Story with Fixed Button -->
+<div class="modal fade stories" id="StorywithFixedButton" data-bs-backdrop="static" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+    <div class="story-image">
+        <img src="assets/img/sample/photo/vertical5.jpg" alt="image">
+    </div>
+    <div class="modal-header">
+        <a href="#" class="profile-detail">
+            <img src="{{ $caroimg2.RelPermalink }}" alt="avatar"
+                class="imaged w36 rounded me-1">
+            <div>
+                <h4>John Doe</h4>
+                <span class="text-muted">5 minutes ago</span>
+            </div>
+        </a>
+        <a href="#" data-bs-dismiss="modal" class="close-stories">
+            <ion-icon name="close"></ion-icon>
+        </a>
+    </div>
+    <div class="modal-body">
+        <a href="#" class="fixed-btn btn btn-primary">Fixed Button</a>
+    </div>
+</div>
+</div>
+</div>
+<!-- * Story with Fixed Button  -->
