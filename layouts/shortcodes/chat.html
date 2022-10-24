@@ -1,0 +1,21 @@
+
+{{ $class := .Get "class" }}
+<div class="message-item {{ $class }}">
+    {{ with .Get "icon" }}
+    {{ $imgicon := resources.Get .  }}
+    {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+    <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar">
+    {{ end }}
+    <div class="content">
+        <div class="title">{{ .Get "name" }}</div>
+        <div class="bubble">
+            {{ with .Get "img" }}
+                {{ $imglink := resources.Get .  }}
+            <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
+            {{ end }}
+            {{ .Get "text" }}
+        </div>
+        <div class="footer">{{ .Get "time" }}</div>
+    </div>
+</div>
+

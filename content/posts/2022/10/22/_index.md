@@ -16,34 +16,34 @@ draft: false
 {{< pagetitle >}}
 
 
-{{< slider_story >}}
-    {{< slide_story_single
+{{< story_slider >}}
+    {{< story_slider_li
         img="/img/numbers/one.jpg" 
         target="Storytest" 
         delay="5000"
         class=""
     >}}
-    {{< slide_story_single
+    {{< story_slider_li
         img="/img/numbers/two.jpg" 
         target="Storytest2" 
         delay="5000"
         class="seen"
     >}}
-    {{< slide_story_single
+    {{< story_slider_li
         img="/img/numbers/one.jpg" 
         target="Storytest3" 
         delay="5000"
         class="passive"
     >}}
 
-{{< /slider_story >}}
+{{< /story_slider >}}
 
 {{< section class="section mt-3 mb-3" >}}
 ok and this is my story of a man who lived in Cornwall. Helived in a small town called St Ives. His name i do not recall. however it was resized as wjpb. but it wasnt supported by iphone so i rolled back to jpg, but now supports video x hopefully
 {{< /section >}}
 
 
-{{< story 
+{{< story_popup
         img="/img/numbers/one.jpg"
         video="/img/sample/test.mp4"
         icon="/img/numbers/two.jpg"  
@@ -55,7 +55,7 @@ ok and this is my story of a man who lived in Cornwall. Helived in a small town 
         button="click me"
         fixbtn="fixed btn"
     >}}
-  {{< story 
+  {{< story_popup
         img="/img/numbers/one.jpg"
         
         icon="/img/numbers/one.jpg"  
@@ -67,7 +67,7 @@ ok and this is my story of a man who lived in Cornwall. Helived in a small town 
         button="click me"
         fixbtn="fixed btn"
     >}}
-     {{< story 
+     {{< story_popup
         img="/img/numbers/two.jpg"
         video="/img/sample/test.mp4"
         icon="/img/numbers/two.jpg"  
