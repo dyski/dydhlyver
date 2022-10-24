@@ -1,4 +1,6 @@
 {{ $class := .Get "class" }}
-<div class="{{ $class }}">
+<div class="section {{ $class }}">
+    <div class="section-title">{{ .Get "title"}}</div>
+    <div class="content-header mb-05">{{ .Get "header"}}</div>
 {{.Inner}}   
 </div>

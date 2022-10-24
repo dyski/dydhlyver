@@ -1,0 +1,17 @@
+<div class="item">
+
+    <span class="time">{{ .Get "time"}}</span>
+    <div class='dot {{ .Get "class"}}'></div>
+    <div class="content">
+
+        {{ $image := .Get "img" }}
+        
+        {{ with .Get "img" }}
+        {{ $imglink := resources.Get .  }}   
+        <img src="{{ $imglink.RelPermalink }}" alt="avatar" class="imaged w100 mb-1">
+        {{ end }}
+        <h4 class="title">{{ .Get "title"}}</h4> 
+        <div class="text">{{.Inner}}</div>
+        
+    </div>
+</div>

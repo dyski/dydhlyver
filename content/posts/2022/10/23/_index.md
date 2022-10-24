@@ -1,7 +1,7 @@
 ---
-title: "Stories"
-description: Story exmaple
-date: 2022-10-22T11:11:13Z
+title: "timeline"
+description: timeline markdown
+date: 2022-10-23T11:11:13Z
 blogimage: ""
 label: "develop"
 layout: blank
@@ -14,9 +14,94 @@ videos: []
 draft: false
 ---
 {{< pagetitle >}}
+{{< section class="full mt-3 mb-2" title="Basic" header="wola wola bingbong">}}
+
+{{< history class="timed">}}
+        
+        {{< history_point 
+        time="1975"
+        img="/img/numbers/two.jpg" 
+        class="bg-warning"
+        title="test title"
+        >}}
+
+        He was only born once, right there, right then. So that makes it a preterite tense.
+        {{< /history_point >}}
+
+{{< /history >}}
 
 
-{{< story_slider >}}
+{{< /section >}}
+
+{{< section class="full mt-3 mb-2" title="No Time" header="small header">}}
+
+{{< history class="">}}
+        
+        {{< history_point 
+        time=""
+        img="/img/numbers/one.jpg" 
+        class="bg-warning"
+        title="test title"
+        >}}
+
+        He was only born once, right there, right then. So that makes it a preterite tense.
+        {{< /history_point >}}
+
+
+{{< history_point 
+        time=""
+        class="bg-warning"
+        title="test title"
+        >}}
+        {{< /history_point >}}
+
+{{< history_point 
+        time=""
+        img="/img/numbers/two.jpg" 
+        class=""
+        title=""
+        >}}
+
+        He was only born once, right there, right then. So that makes it a preterite tense.
+        {{< /history_point >}}
+
+{{< /history >}}
+
+
+{{< /section >}}
+
+{{< section class="message-divider" >}}
+Friday, Sep 20, 10:40 AM
+{{< /section >}}
+
+{{< chat 
+        
+        img="/img/numbers/one.jpg"
+        icon="/img/numbers/two.jpg"  
+        name="Steve" 
+        time="10:40AM"
+        text="pyth yw hemma?"
+
+ >}}
+
+ {{< chat 
+        
+        icon="/img/numbers/one.jpg"  
+        name="Raymond" 
+        time="10:45AM"
+        text="ny wonn, pyth yw henna?"
+
+ >}}
+
+
+ {{< chat 
+        class="user"
+        time="10:50AM"
+        text="aval yw"
+
+ >}}
+
+ {{< story_slider >}}
     {{< story_slider_li
         img="/img/numbers/one.jpg" 
         target="Storytest" 
