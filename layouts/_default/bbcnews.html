@@ -22,7 +22,15 @@
             {{ .PublishDate.Format "January 2, 2006" }}
         </div>
         
+
+       
+        
         <div class="post-body">
+
+            
+             
+          
+
             {{ if .Page.Params.data }}
   
             <div class="mb-5">
@@ -73,6 +81,20 @@
           
         </div>
     </div>
+
+    {{ if .Page.Params.mp3 }}
+        {{ if eq $.Page.Params.withaudio false }}
+         <div class="section  mb-4">
+            {{ $mp3 := .Page.Params.mp3 }}
+            
+                <audio controls>
+                    <source src="{{ $mp3 }}" type="audio/mp3">
+                    <p>Your browser does not support HTML5 audio :(</p>
+                 </audio> 
+
+         
+        </div>
+        {{ end }}{{end}}
 
 
     <div class="section mt-4 mb-4">

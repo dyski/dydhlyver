@@ -11,7 +11,6 @@ images = ['img/icon/512x512.png']
 	author = "authors"
 	category = "categories"
   tags = "tags"
-  news = "news"
   posts = "posts"
 
 [outputFormats]
