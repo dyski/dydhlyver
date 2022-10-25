@@ -1,0 +1,11 @@
+<li class="splide__slide">
+    
+    {{ $image := .Get "img" }}
+    {{ $imglink := resources.Get $image }}
+    {{ $imglink:= $imglink.Fill "100x100 center" }}
+
+        <img src="{{ $imglink.RelPermalink }}" alt="alt101" class="imaged w-100">
+
+</li>
+
+

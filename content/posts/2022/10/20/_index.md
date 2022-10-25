@@ -1,6 +1,6 @@
 ---
-title: "Swatch basic"
-description: Swatch basic
+title: "Border corads"
+description: card with border and small gallery
 date: 2022-10-20T11:11:13Z
 blogimage: ""
 label: "develop"
@@ -16,7 +16,7 @@ draft: false
 ---
 {{< pagetitle >}}
 
-
+{{< section class="full mt-3 mb-3">}}
 {{< slider typeSorM="multiple">}}
 
 
@@ -40,6 +40,10 @@ draft: false
     >}}
 
 {{< /slider >}}
+{{< /section >}}
+
+
+{{< section class="full mt-3 mb-3">}}
 
 {{< slider typeSorM="single">}}
 
@@ -64,5 +68,29 @@ draft: false
     >}}
 
 {{< /slider >}}
+{{< /section>}}
 
 
+{{< section class="full mt-3 mb-3">}}
+<div class="wide-block pt-2 pb-2">
+               
+            
+{{< slider typeSorM="small">}}
+
+
+    {{< slide_card_small
+        img="/img/numbers/one.jpg" 
+     
+    
+    >}}
+
+    {{< slide_card_small 
+
+        img="/img/numbers/two.jpg" 
+        
+    
+    >}}
+
+{{< /slider >}}
+</div>
+{{< /section >}}

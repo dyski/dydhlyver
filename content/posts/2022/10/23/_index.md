@@ -14,7 +14,7 @@ videos: []
 draft: false
 ---
 {{< pagetitle >}}
-{{< section class="full mt-3 mb-2" title="Basic" header="wola wola bingbong">}}
+{{< section class="inset mt-3 mb-2" title="Basic" header="wola wola bingbong" footer="well this is nice">}}
 
 {{< history class="timed">}}
         
