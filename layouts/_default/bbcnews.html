@@ -84,20 +84,22 @@
         </div>
     </div>
 
-    {{ if .Page.Params.mp3 }}
+   <!-- {{ if .Page.Params.mp3 }}
         {{ if eq $.Page.Params.withaudio false }}
          <div class="section  mb-4">
+            
+            
             {{ $mp3 := .Page.Params.mp3 }}
             
                 <audio controls>
-                    <source src="{{ $mp3 }}" type="audio/mp3">
+                    <source src="http://docs.google.com/uc?export=open&id={{ $mp3 }}" type="audio/mp3">
                     <p>Your browser does not support HTML5 audio :(</p>
                  </audio> 
 
          
         </div>
         {{ end }}{{end}}
-
+    -->
 
     <div class="section mt-4 mb-4">
         <button type="button" class="btn btn-outline-primary btn-block" data-bs-toggle="offcanvas"
