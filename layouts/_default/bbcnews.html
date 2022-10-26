@@ -10,8 +10,10 @@
             <img src="{{ ($imgsrc.Fill "800x400 q100 Center").RelPermalink }}" alt="image" class="imaged square w-100">
         </div>
       
-        <h1 class="title">{{$.Page.Params.title}}</h1>
-
+        <h1 class="title">{{ .PublishDate.Format "02/01/2006" }} </h1>
+        <!--{{ .Title}}-->
+        
+        
         <div class="post-header">
             <div>
                 <a href="#">
@@ -31,7 +33,7 @@
              
           
 
-            {{ if .Page.Params.data }}
+            
   
             <div class="mb-5">
           
@@ -43,8 +45,8 @@
             data-bs-target="#text{{ $counter }}" >START</button> 
             </div>
           
-            {{ range ( index (index .Site.Data.annowodhow $.Page.Params.data) "cornish" ) }}
-          
+            {{ range ( index (index .Site.Data.annowodhow $.File.TranslationBaseName) "cornish" ) }}
+            
           
             {{ if eq $.Page.Params.withaudio true }}
                 {{ $dir :=  $.Page.Params.data }}
@@ -77,7 +79,7 @@
             {{ end }}
           </div>
           
-          {{ end }}
+         
           
         </div>
     </div>
