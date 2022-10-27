@@ -11,7 +11,7 @@
         </div>
       
         <h1 class="title">
-            {{ index $.Site.Data.dates.ordinal .Date.Day | title}} 
+            {{ index $.Site.Data.dates.ordinal .Date.Day | humanize }} 
             a vis                   
             {{ index $.Site.Data.dates.months .Date.Month }}
             {{ .Date.Format "2006" }}
