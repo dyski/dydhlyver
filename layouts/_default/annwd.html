@@ -57,7 +57,7 @@
                             </div>
                             {{ else }}
 
-                            <div class="icon-box bg-primary">
+                            <div class="icon-box bg-warning">
                                 <ion-icon name="volume-mute-outline"></ion-icon>
                             </div>
                             {{ end }}
@@ -73,7 +73,7 @@
                                 <div class="text-muted">{{index .Params.authors 0 }}</div></div>
                                 {{ if eq .Params.withaudio true }}
                             
-                                <span class="badge badge-danger">on</span>
+                                <span class="badge badge-info">on</span>
                                 {{ end }}
                             </div>
                         </a>
