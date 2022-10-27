@@ -48,6 +48,16 @@
                     </span>
                 </a>
             </li>
+            <li>
+                {{ $whatsapp := "whatsapp://send?text="}}
+                <a href="#" class="btn btn-list" data-bs-dismiss="offcanvas" title="Share this on Whatsapp" onclick="window.open('{{ $whatsapp }}{{ $pageurl }}');">
+                    <span>
+                        <ion-icon name="logo-whatsapp"></ion-icon>
+                        whatsapp
+                    </span>
+                </a>
+            </li>
+           
             
         </ul>
     </div>

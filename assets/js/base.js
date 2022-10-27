@@ -14,7 +14,7 @@ const Mobilekit = {
     //-------------------------------------------------------------------
     // PWA Settings
     PWA: {
-        enable: false, // Enable or disable PWA
+        enable: true, // Enable or disable PWA
     },
     //-------------------------------------------------------------------
     // Dark Mode Settings
