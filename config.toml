@@ -24,6 +24,11 @@ images = ['img/icon/512x512.png']
 [outputs]
     home = [ "HTML", "RSS", "MANIFEST"]
 
+[permalinks]
+  news = "/An-Nowodhow/:2006/:01/:02/"
+
+
+
 [menu]
   [[menu.main]]
     name = 'Home'

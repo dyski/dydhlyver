@@ -10,7 +10,14 @@
             <img src="{{ ($imgsrc.Fill "800x400 q100 Center").RelPermalink }}" alt="image" class="imaged square w-100">
         </div>
       
-        <h1 class="title">{{ .PublishDate.Format "02/01/2006" }} </h1>
+        <h1 class="title">
+            {{ index $.Site.Data.dates.ordinal .Date.Day | title}} 
+            a vis                   
+            {{ index $.Site.Data.dates.months .Date.Month }}
+            {{ .Date.Format "2006" }}
+
+            
+        </h1>
         <!--{{ .Title}}-->
         
         
@@ -21,7 +28,10 @@
                     {{index $.Page.Params.authors 0 }}
                 </a>
             </div>
-            {{ .PublishDate.Format "January 2, 2006" }}
+            {{ index $.Site.Data.dates.ordinalshort .Date.Day | title}} 
+                         
+            {{ index $.Site.Data.dates.months .Date.Month }}
+            {{ .Date.Format "2006" }}
         </div>
         
 

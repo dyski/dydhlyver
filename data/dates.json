@@ -1,0 +1,13 @@
+{
+	"months": ["", "Genver", "Hwevrer", "Meurth", "Ebrel", "Me", "Metheven", "Gortheren", "Est", "Gwyngala", "Hedra", "Du", "Kevardhu"],
+	"monthshort": ["", "Gen", "Hwv", "Meu", "Ebr", "Me", "Met", "Gor", "Est", "Gwy", "Hed", "Du", "Kev"],
+	"ordinal": ["", "kynsa", "nessa", "tressa", "peswora", "pympes", "hweghves", "seythves", "ethves", "nawves", "degves",
+		"unnegves", "dewdhegves", "tredhegves", "peswardhegves", "pymthegves", "hwetegves", "seytegves", "etegves", "nownsegves", "ugensves",
+		"kynsa warn ugens", "nessa warn ugens", "tressa warn ugens", "pympes warn ugens", "hweghves warn ugens", "seythves warn ugens", "ethves warn ugens", "nawves warn ugens", "degves warn ugens",
+		"unnegves warn ugens"],
+    "ordinalshort": ["", "1a", "2a", "3a", "4a", "5es", "6ves", "7ves", "8ves", "9ves", "10ves",
+		"11ves", "12ves", "13ves", "14ves", "15ves", "16ves", "17ves", "18ves", "19ves", "20ves",
+		"21a", "22a", "23a", "24a", "25es", "26ves", "27ves", "28ves", "29ves", "30ves",
+		"31ves"
+	]
+}

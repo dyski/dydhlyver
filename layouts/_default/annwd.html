@@ -37,8 +37,10 @@
                 {{ range .Pages.GroupByDate "January 2006" }}
 
                 <div class="listview-title sticky-title">
-                    <strong>{{ .Key }}</strong>
-                    <span class="text-small">Audio</span>
+                    <strong>{{ .Key  }}
+                        
+                    </strong>
+                    <span class="text-small">{{ .Key }}</span>
                 </div>
 
                 <ul class="listview image-listview">
@@ -49,13 +51,28 @@
                     <li>
                         <a href="{{ .RelPermalink }}" class="item">
                             
-                            <div class="icon-box bg-primary">
-                                <ion-icon name="image-outline"></ion-icon>
+                            {{ if eq .Params.withaudio true }}
+                            <div class="icon-box bg-success">
+                                <ion-icon name="volume-high-outline"></ion-icon>
                             </div>
-                            
+                            {{ else }}
+
+                            <div class="icon-box bg-primary">
+                                <ion-icon name="volume-mute-outline"></ion-icon>
+                            </div>
+                            {{ end }}
                             <div class="in">
-                                {{ .Title }}
+                                <div>
+                                {{ index $.Site.Data.dates.ordinalshort .Date.Day | title}} 
+                         
+                                {{ index $.Site.Data.dates.months .Date.Month }}
+                                {{ .Date.Format "2006" }}
+                                
+
+                                
+                                <div class="text-muted">{{index .Params.authors 0 }}</div></div>
                                 {{ if eq .Params.withaudio true }}
+                            
                                 <span class="badge badge-danger">on</span>
                                 {{ end }}
                             </div>
