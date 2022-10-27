@@ -76,25 +76,3 @@ if(locationBut.length){
         }
 
 
-    //Adding Local Storage for Visited Links
-        var checkVisited = document.querySelectorAll('.check-visited');
-            if(checkVisited.length){
-            function check_visited_links(){
-                var visited_links = JSON.parse(localStorage.getItem('_Visited_Links')) || [];
-                var links = document.querySelectorAll('.check-visited a');
-                for (let i = 0; i < links.length; i++) {
-                    var that = links[i];
-                    that.addEventListener('click',function(e){
-                        var clicked_url = this.href;
-                        if (visited_links.indexOf(clicked_url)==-1) {
-                            visited_links.push(clicked_url);
-                            localStorage.setItem('_Visited_Links', JSON.stringify(visited_links));
-                        }
-                    })
-                    if (visited_links.indexOf(that.href)!== -1) {
-                        that.className += ' btn';
-                    }
-                }
-            }
-            check_visited_links();
-        }

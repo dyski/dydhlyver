@@ -43,12 +43,12 @@
                     <span class="text-small">{{ .Key }}</span>
                 </div>
 
-                <ul class="listview image-listview check-visited">
+                <ul class="listview image-listview">
 
 
                     {{ range .Pages.ByPublishDate.Reverse }}
                     
-                    <li class="check-visited">
+                    <li>
                         <a href="{{ .RelPermalink }}" class="item">
                             
                             {{ if eq .Params.withaudio true }}
