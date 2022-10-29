@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- partial "masthead.html" . -}}
+
+
+
+<div id="appCapsule">   
+    <ul class="listview image-listview media mb-2">
+        {{ range $elem_index, $elem_val := .Site.Data.flags }}
+        
+        {{ with .cornish }}
+        
+      
+        <li>
+            <div class="item"> 
+                            
+                {{ $path := print "/img/flags/1x1/" $elem_val.img}}
+                {{ $imgsrc := resources.Get $path }}    
+
+                <div class="imageWrapper">                    
+                    <img src="{{ $imgsrc.RelPermalink }}" alt="image" class="imaged w32">
+                </div>
+                
+                <div class="in">
+                    <div>
+                        {{ $elem_val.cornish }}
+                      
+                        <div class="text-muted">{{ $elem_val.english }}</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{ end }}   {{ end }}     
+    </ul>
+    
+        
+</div>
+
+{{ end }}

@@ -19227,17 +19227,7 @@
   "cornish": "ynjynorieth",
   "d1": "feminine noun"
  },
- {
-  "english": "England",
-  "cornish": "Inglond",
-  "d1": "masculine noun",
-  "details": "also\nPow Sows"
- },
- {
-  "english": "England",
-  "cornish": "Pow an Sowson",
-  "cat": "topography"
- },
+
  {
   "english": "England",
   "cornish": "Pow Sows",
@@ -23814,13 +23804,6 @@
   "d1": "masculine noun",
   "d2": "masculine noun",
   "details": "also\nGermani",
-  "cat": "topography"
- },
- {
-  "english": "Germany",
-  "cornish": "Germani",
-  "d1": "masculine noun",
-  "details": "also\nAlmayn",
   "cat": "topography"
  },
  {
@@ -30632,7 +30615,7 @@
   "cat": "topography"
  },
  {
-  "english": "Ireland",
+  "english": "Ireland (alternative)",
   "cornish": "Wordhen",
   "d1": "feminine noun",
   "cat": "topography"
@@ -40514,6 +40497,12 @@
   "d1": "masculine noun",
   "cat": "geographicposition"
  },
+ {
+    "english": "Northern Ireland",
+    "cornish": "Iwerdhon Gledh",
+    "d1": "masculine noun",
+    "cat": "geographicposition"
+   },
  {
   "english": "Norway",
   "cornish": "Norgagh",
@@ -52422,7 +52411,7 @@
   "details": "also\nlosten vrith\nlostennow brith"
  },
  {
-  "english": "Scotland (country)",
+  "english": "Scotland",
   "cornish": "Alban",
   "d1": "masculine noun",
   "cat": "topography"

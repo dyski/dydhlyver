@@ -56,23 +56,4 @@ if(locationBut.length){
     }
 }
 
-        //Vibrate API
-        var vibrateButton = document.querySelectorAll('[data-vibrate]');
-        if(vibrateButton.length){
-            var startVibrating = document.getElementsByClassName('start-vibrating')[0];
-            var stopVibrating = document.getElementsByClassName('stop-vibrating')[0];
-
-            startVibrating.addEventListener('click',function(){
-                var vibrateTime = document.getElementsByClassName('vibrate-demo')[0].value;
-                window.navigator.vibrate(vibrateTime);
-            })
-            stopVibrating.addEventListener('click',function(){
-                window.navigator.vibrate(0);
-            })
-            vibrateButton.forEach(el => el.addEventListener('click',e =>{
-                var vibrateTime = el.getAttribute('data-vibrate');
-                window.navigator.vibrate(vibrateTime);
-            }));
-        }
-
 
