@@ -25,8 +25,8 @@ draft: false
         subtitle="One" 
         title="Onan" 
         icon="cube-outline" 
-        linktext="listen"  
-        bodytext="use unn before nouns, eg 'onan rag oll' (one for all) and 'Unn Ki' (one dog)" 
+        linktext="listen up"  
+        bodytext="eg 'onan rag oll' (one for all) and 'Unn Ki' (one dog)" 
     >}}
 
     {{< slide_card_border 
@@ -46,6 +46,7 @@ draft: false
 {{< section class="full mt-3 mb-3">}}
 
 {{< slider typeSorM="single">}}
+
 
 
     {{< slide_card_border 

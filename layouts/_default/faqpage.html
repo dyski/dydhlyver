@@ -2,38 +2,25 @@
 
 {{- partial "masthead.html" . -}} 
 <div id="appCapsule">
-
-    <div class="carousel-multiple splide">
-        <div class="splide__track">
-            <ul class="splide__list"> 
-
-                {{ range $elem_index, $elem_val := .Site.Data.country }}
-    {{ range where $.Site.Data.eger_ray "english" $elem_val.name }}
+    
     
 
-    <li class="splide__slide">
-        <div class="card">
-            {{$path := $elem_val.flag_4x3}}
-            {{ $path := print "/img/" $path}}
-            {{ $imgsrc := resources.Get $path }}        
-            <img src="{{ $imgsrc.RelPermalink  }}" class="card-img-top" alt="image">
-            <div class="card-body">
-                <h6 class="card-subtitle">{{ .english }}</h6>
-                <h5 class="card-title">{{ .cornish }}</h5>
-                <p class="card-text">hello </p>
-               
+  
+
+    <div class="card" style="height:300px">
+        <div class="animated-title">
+            <div class="text-top">
+              <div>
+                <span>kernewek</span>
+              </div>
             </div>
-        </div>
-    </li>
-        
-     
- {{ end }}
- {{ end }}
+            <div class="text-bottom">
+              <div>english</div>
+            </div>
+          </div>
 
-            </ul>
-        </div>
     </div>
-
+</div>
 
 
 

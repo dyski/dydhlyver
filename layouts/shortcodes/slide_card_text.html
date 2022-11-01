@@ -1,0 +1,22 @@
+<li class="splide__slide">
+
+    {{ $audio := .Get "mp3" }}
+    {{ $dir := .Get "dir" }}
+
+
+    {{ $path := print "/audio/vocab/" $dir "/" $audio ".mp3"}}
+    {{ $sndlink := resources.Get $path }}
+    <audio id="sound{{ $audio }}" src="{{$path}}" preload="auto"></audio>
+
+<div class="card product-card">       
+<div class="card-body">
+             <h2 class="title">{{ .Get "title" }}</h2>
+            <p class="text">{{ .Get "bodytext"}} </p>
+            <a href="#" class="btn btn-sm btn-primary btn-block" onclick="
+            document.getElementById('sound{{ $audio }}').play();">
+                <ion-icon name="play-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+</li>
+
