@@ -1,0 +1,424 @@
+[{
+  "english": "Monday",
+  "cornish": "dy'Lun",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dylun"
+},
+{
+  "english": "Tuesday",
+  "cornish": "dy'Meurth",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dymeurth"
+},
+{
+  "english": "Wednesday",
+  "cornish": "dy'Mergher",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dylmergher"
+},
+
+{
+  "english": "Thursday",
+  "cornish": "dy'Yow",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dyyow"
+},
+{
+  "english": "Friday",
+  "cornish": "dy'Gwener",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dygwener"
+},
+{
+  "english": "Saturday",
+  "cornish": "dy'Sadorn",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dysadorn"
+},
+{
+  "english": "Sunday",
+  "cornish": "dy'Sul",
+  "type": "noun",
+  "gender": "m",
+  "dir": "daysofweek",
+  "mp3": "dysul"
+},
+{
+  "english": "Saturday night",
+  "cornish": "dy'Sadorn dhe nos",
+  "type": "idiom"
+},
+{
+  "english": "friday night",
+  "cornish": "dy'Gwener dhe nos",
+  "type": "idiom"
+},
+{
+  "english": "Thursday night",
+  "cornish": "dy'Yow dhe nos",
+  "type": "idiom"
+},
+{
+  "english": "Advent",
+  "cornish": "Asvens",
+  "type": "noun",
+  "gender": "m",
+
+  "details": "The first season of the Church year, leading up to Christmas and including the four preceding Sundays."
+},
+{
+  "english": "on a Sunday",
+  "cornish": "Sulgweyth",
+  "type": "adverb"
+},
+{
+  "english": "Low Sunday",
+  "cornish": "Pask Byghan",
+  "type": "noun",
+  "gender": "m",
+  "details": "the Sunday after Easter"
+},
+{
+  "english": "Wednesday night",
+  "cornish": "dy'Mergher dhe nos",
+  "type": "idiom"
+},
+{
+  "english": "Monday night",
+  "cornish": "dy'Lun dhe nos",
+  "type": "idiom"
+},
+
+{
+  "english": "Midsummer",
+  "cornish": "Golowan",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "Good Friday",
+  "cornish": "dy'Gwener an Grows",
+  "type": "idiom"
+},
+{
+  "english": "all day long",
+  "cornish": "dres an jydh",
+  "type": "idiom"
+},
+{
+  "english": "St Just Feast",
+  "cornish": "dy'gol St Yestin"
+},
+{
+  "english": "Lent",
+  "cornish": "Korawys",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "Bank Holiday",
+  "cornish": "dy'gol kemmyn",
+  "type": "noun",
+  "gender": "m"
+},
+
+{
+  "english": "Boxing Day",
+  "cornish": "dy'Gol Stefan",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "Christmas Day",
+  "cornish": "Dydh Nadelik",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "Whitmonday",
+  "cornish": "dy'Lun Pentekost",
+  "type": "idiom"
+},
+{
+  "english": "yesterday",
+  "cornish": "de",
+  "type": "adverb"
+},
+{
+  "english": "yesterday morning",
+  "cornish": "de vyttin",
+  "type": "adverb"
+},
+{
+  "english": "tomorrow morning",
+  "cornish": "ternos vyttin",
+  "type": "adverb"
+},
+{
+  "english": "dawn",
+  "cornish": "bora",
+  "type": "noun",
+  "gender": "m",
+  "plural": "boraow"
+
+},
+{
+  "english": "day",
+  "cornish": "dy'",
+  "type": "noun",
+  "gender": "m",
+  "type": "abbreviation"
+},
+{
+  "english": "day - date",
+  "cornish": "dydh",
+  "type": "noun",
+  "gender": "m",
+  "plural": "dedhyow"
+},
+{
+  "english": "daybreak",
+  "cornish": "taran dydh",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "daytime",
+  "cornish": "dydhweyth",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "today",
+  "cornish": "hedhyw",
+  "type": "adverb"
+},
+{
+  "english": "earlier today",
+  "cornish": "hedhyw y'n jydh",
+  "type": "adverb"
+},
+{
+  "english": "week",
+  "cornish": "seythen",
+  "type": "noun",
+  "gender": "f",
+  "plural": "seythennyow",
+  "d2": "plural"
+},
+{
+  "english": "weekly",
+  "cornish": "pub seythen",
+  "type": "adverb"
+},
+{
+  "english": "weekly",
+  "cornish": "seythennyek",
+  "type": "adjective"
+},
+{
+  "english": "today week",
+  "cornish": "an jydh ma war seythen",
+  "details": "Gerva KDL - Vocabulary for the Kesva an Taves Kernewek Second Grade Examination",
+  "type": "idiom"
+},
+
+{
+  "english": "weekday",
+  "cornish": "dy'gweyth",
+  "type": "noun",
+  "gender": "m",
+  "plural": "dedhyow gweyth",
+  "d2": "plural"
+},
+{
+  "english": "weekend",
+  "cornish": "penn-seythen",
+  "type": "noun",
+  "gender": "m",
+  "plural": "pennow-seythen / pennseythennyow"
+},
+{
+  "english": "weekly",
+  "cornish": "pub seythen",
+  "type": "adverb"
+},
+{
+  "english": "weekly",
+  "cornish": "seythennyek",
+  "type": "adjective"
+},
+{
+  "english": "every day",
+  "cornish": "pub dydh",
+  "type": "adverb"
+},
+{
+  "english": "every day but today",
+  "cornish": "pub dydh aral",
+  "type": "idiom"
+},
+{
+  "english": "every night - nightly",
+  "cornish": "pub nos",
+  "type": "adverb"
+},
+{
+  "english": "every other day",
+  "cornish": "pub nessa dydh",
+  "type": "adverb"
+},
+{
+  "english": "first day of the month - calends",
+  "cornish": "kalan",
+  "type": "noun",
+  "gender": "m",
+  "plural": "kalannow"
+},
+{
+  "english": "holiday / feast day",
+  "cornish": "dy'gol",
+  "type": "noun",
+  "gender": "m",
+  "plural": "dy'golyow"
+},
+{
+  "english": "on the day after tomorrow",
+  "cornish": "trenja",
+  "type": "adverb"
+},
+{
+  "english": "on the day before yesterday",
+  "cornish": "dygynsete",
+  "type": "adverb"
+},
+{
+  "english": "Plough Monday",
+  "cornish": "dy'Lun Arader"
+},
+{
+  "english": "in three days time",
+  "cornish": "godreva",
+  "details": "the third day from now",
+  "type": "adverb"
+},
+{
+  "english": "in three days time - the third day from now",
+  "cornish": "godrevedh",
+  "type": "adverb"
+},
+{
+  "english": "May Day",
+  "cornish": "Kala' Me",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "midday",
+  "cornish": "hanter dydh",
+  "type": "noun",
+  "gender": "m",
+  "details": "this common term appears in several different forms."
+},
+{
+  "english": "New Year's Day",
+  "cornish": "Kalan Genver",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "nowadays",
+  "cornish": "y'n jydh hedhyw",
+  "type": "idiom"
+},
+{
+  "english": "'obby 'oss Festival",
+  "cornish": "Gool Penn Glas",
+  "type": "noun",
+  "gender": "m",
+  "details": "The 'Obby 'Oss festival is a folk custom that takes place each May Day in Padstow, Cornwall. It involves two separate processions making their way around the town, each containing an eponymous hobby horse known as the 'Obby 'Oss. The festival starts at midnight on May Eve when townspeople gather outside the Golden Lion Inn to sing the \"Night Song.\" By morning, the town has been dressed with greenery and flowers placed around the maypole. The excitement begins with the appearance of one of the 'Obby 'Osses. Male dancers cavort through the town dressed as one of two 'Obby 'Osses, the \"Old\" and the \"Blue Ribbon\" 'Obby 'Osses; as the name suggests, they are stylised kinds of horses. Prodded on by acolytes known as \"Teasers\" each wears a mask and black frame-hung cape under which they try to catch young maidens as they pass through the town. Throughout the day, the two parades, led by the \"MC\" in his top hat and decorated stick, followed by a band of accordions and drums, then the 'Oss and the Teaser, with a host of people, the \"Mayers\" - all singing the \"Morning Song\" – pass along the streets of the town. Finally, late in the evening, the two 'osses meet, at the maypole, before returning to their respective stables where the crowd sings of the 'Obby 'Oss death, until its resurrection the following May Eve."
+},
+{
+  "english": "some days ago",
+  "cornish": "Nans yw nebes dedhyow",
+  "details": "Gerva KDL - Vocabulary for the Kesva an Taves Kernewek Second Grade Examination",
+  "type": "idiom"
+},
+{
+  "english": "the good old days",
+  "cornish": "an hendedhyow brav",
+  "type": "idiom"
+},
+{
+  "english": "the next day",
+  "cornish": "ternos",
+  "details": "Gerva KDL - Vocabulary for the Kesva an Taves Third Grade Examination",
+  "type": "adverb"
+},
+{
+  "english": "the olden days",
+  "cornish": "hendedhyow",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "in the morning",
+  "cornish": "myttinweyth",
+  "type": "adverb"
+},
+{
+  "english": "in the morning",
+  "cornish": "y'n myttin",
+  "type": "adverb"
+},
+
+{
+  "english": "morning twilight",
+  "cornish": "boragweyth",
+  "type": "noun",
+  "gender": "f",
+  "plural": "boragweythyow",
+  "d2": "plural"
+},
+{
+  "english": "this morning",
+  "cornish": "hedhyw vyttin",
+  "details": "also an myttin ma",
+  "type": "adverb"
+},
+
+{
+  "english": "yesterday morning",
+  "cornish": "de vyttin",
+  "type": "adverb"
+},
+{
+  "english": "over the weekend",
+  "cornish": "dres an Sul",
+  "type": "idiom"
+},
+{
+  "english": "New Year's Day",
+  "cornish": "Kalan Genver",
+  "type": "noun",
+  "gender": "m"
+},
+{
+  "english": "All Hallows",
+  "cornish": "Kalan Gwav",
+  "type": "noun",
+  "gender": "m"
+}
+]

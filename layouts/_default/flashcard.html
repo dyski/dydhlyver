@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{- partial "mastheadscroll.html" . -}}
+
+    <!-- App Capsule -->
+    <div id="appCapsule" >
+
+        <div class="section mb-3">
+
+        
+      {{ .Content }}
+
+     
+{{- $odd := false}}
+      {{ range $elem_index, $elem_val := .Site.Data.vocabdays }}
+
+        
+        {{ $audio := .mp3 }}
+        {{ $dir := .dir }}
+    
+    
+        {{ $path := print "/audio/vocab/" $dir "/" $audio ".mp3"}}
+        {{ $sndlink := resources.Get $path }}
+
+        
+        
+           {{$odd = not $odd}}
+           {{if $odd}}<div class="row mt-2">{{else}}  {{end}}
+        
+       
+        <div class="col-6">
+            {{if .mp3 }}<audio id="sound{{ $audio }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+           <div class="card product-card" {{ if .mp3 }} onclick="document.getElementById('sound{{ $audio }}').play();"{{end}}>       
+                <div class="card-body">
+                <h2 class="title">{{ .cornish }}</h2>
+                <p class="text">{{ .english }}</p>
+            </div>
+        </div>
+        
+        {{if $odd}}{{else}}</div> {{end}}
+        </div>
+        
+   {{ end }}
+
+
+
+
+
+  
+
+
+
+
+</div>
+    </div>
+    <!-- * App Capsule -->
+
+
+{{ end }}
