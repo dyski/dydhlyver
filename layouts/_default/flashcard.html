@@ -9,6 +9,73 @@
         
       {{ .Content }}
 
+
+      <div class="listview-title mt-2">Link Listview</div>
+      <div class="card">
+      
+       <div class="card-header">
+           Quote
+       </div>
+
+
+
+
+      
+       
+       <ul class="listview image-listview media">
+      {{- $odd := false}}
+      {{ range $elem_index, $elem_val := .Site.Data.vocabdays }}
+   
+        
+        {{ $audio := .mp3 }}
+        {{ $dir := .dir }}
+    
+    
+        {{ $path := print "/audio/vocab/" $dir "/" $audio ".mp3"}}
+        {{ $sndlink := resources.Get $path }}
+   
+        
+        
+           
+                {{if .mp3 }}<audio id="sound{{ $audio }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+                       
+                
+                       <li>
+                        <div class="item">
+                               <div class="in">
+                                   <div>
+                                       
+                                       {{ .cornish }}
+                                       {{if .plural }}<br><small>{{.plural }}</small> {{ end }}
+                                       <div class="text-muted">{{ .english }}</div>
+                                       
+                                   </div>
+                                   <span class="text-muted">{{ .gender }} {{ .type }}</span>
+
+                                
+                                    
+                                </div>
+                                   
+                               
+                                </div>
+                       </li>
+                 
+   
+            
+        
+      
+        
+   {{ end }}
+   </ul>
+   
+      
+   </div>
+
+
+
+
+      
+
      
 {{- $odd := false}}
       {{ range $elem_index, $elem_val := .Site.Data.vocabdays }}
@@ -41,6 +108,121 @@
         
    {{ end }}
 
+
+
+
+
+
+
+
+
+
+
+
+
+   {{- $odd := false}}
+      {{ range $elem_index, $elem_val := .Site.Data.vocabdays }}
+
+        
+        {{ $audio := .mp3 }}
+        {{ $dir := .dir }}
+    
+    
+        {{ $path := print "/audio/vocab/" $dir "/" $audio ".mp3"}}
+        {{ $sndlink := resources.Get $path }}
+
+        
+        
+           {{$odd = not $odd}}
+           {{if $odd}}<div class="row mt-2">{{else}}  {{end}}
+        
+            <div class="col-6">
+                {{if .mp3 }}<audio id="sound{{ $audio }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+                       
+               <div class="card  {{if eq .type "noun" }}text-white bg-success {{end}}mb-2" {{ if .mp3 }} onclick="document.getElementById('sound{{ $audio }}').play();"{{end}}>
+ 
+                <div class="card-body">
+                        <h3 class="card-title d-flex justify-content-between">
+                                {{ .cornish }}<br/>
+                                <span class="badge badge-primary">{{if eq .gender "f" }}{{.gender}}{{end}}</span>
+                        </h3>
+                        <p class="card-text">{{ .english }}</p>
+                    </div>
+                </div>
+            </div>
+        {{if $odd}}{{else}}</div> {{end}}
+      
+        
+   {{ end }}
+
+
+
+
+
+   <div class="listview-title mt-2">Link Listview</div>
+   <div class="card">
+   
+    <div class="card-header">
+        Quote
+    </div>
+   
+    
+    <ul class="listview flush transparent image-listview text">
+   {{- $odd := false}}
+   {{ range $elem_index, $elem_val := .Site.Data.vocabdays }}
+
+     
+     {{ $audio := .mp3 }}
+     {{ $dir := .dir }}
+ 
+ 
+     {{ $path := print "/audio/vocab/" $dir "/" $audio ".mp3"}}
+     {{ $sndlink := resources.Get $path }}
+
+     
+     
+        
+             {{if .mp3 }}<audio id="sound{{ $audio }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+                    
+             
+                    <li>
+                        <a href="#" class="item">
+                            <div class="in">
+                                <div>
+                                    <header></header>
+                                    {{ .cornish }}
+                                    {{if .plural }}<footer>plural: {{.plural }}</footer> {{ end }}
+                                    <footer class="text-muted">{{ .english }}</footer>
+                                    
+                                </div>
+                                <span class="text-muted">{{ .type }}</span>
+                                
+                            </div>
+                        </a>
+                    </li>
+              
+
+         
+     
+   
+     
+{{ end }}
+</ul>
+
+   
+</div>
+
+
+
+
+
+
+
+
+
+
+   
+   
 
 
 
