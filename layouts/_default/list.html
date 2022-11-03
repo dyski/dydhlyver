@@ -9,7 +9,7 @@
             <a href="{{ .RelPermalink }}" class="item">
                 
                 {{ with .Params.images }}
-                {{$path := index . 0 }}
+                {{ $path := index . 0 }}
                 {{ $imgsrc := resources.Get $path }}
                 {{ $imgsrc:= $imgsrc.Fill "64x64 center" }}
 

@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{- partial "mastheadscroll.html" . -}}
+
+    <!-- App Capsule -->
+
+
+
+
+    <!-- * App Capsule -->
+    <div id="appCapsule">
+        <div class="blog-post">
+            
+            
+                
+        
+    
+                {{$path := index $.Page.Params.images 0}}
+                {{ $imgsrc := resources.Get $path }}        
+
+          
+  
+            <!--{{ .Title}}-->
+            
+            
+            <div class="post-header">
+                
+                    <div>
+                        <a href="#">
+                            {{.File.TranslationBaseName}} - {{ .Title}} 
+                        </a><br>
+                        {{  .Params.description }}
+                    </div>
+                        <div>
+
+                        <button type="button" class="btn btn-icon btn-primary me-1 mb-1">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </button>
+                        <button type="button" class="btn btn-icon btn-secondary me-1 mb-1">
+                            <ion-icon name="musical-notes-outline"></ion-icon>
+                                                </button>
+                
+                
+            </div></div>
+            
+
+           
+            
+            <div class="post-body">
+         
+                <div class="mb-5">
+              
+                {{ .Content }}
+              
+                
+            </div>
+        </div>
+    
+       <!-- {{ if .Page.Params.mp3 }}
+            {{ if eq $.Page.Params.withaudio false }}
+             <div class="section  mb-4">
+                
+                
+                {{ $mp3 := .Page.Params.mp3 }}
+                
+                    <audio controls>
+                        <source src="http://docs.google.com/uc?export=open&id={{ $mp3 }}" type="audio/mp3">
+                        <p>Your browser does not support HTML5 audio :(</p>
+                     </audio> 
+    
+             
+            </div>
+            {{ end }}{{end}}
+        -->
+    
+        <div class="section mt-4 mb-4">
+            <button type="button" class="btn btn-outline-primary btn-block" data-bs-toggle="offcanvas"
+                data-bs-target="#actionSheetShare">
+                <ion-icon name="share-outline"></ion-icon>
+                Share This Post
+            </button>
+        </div>
+    
+
+    </div>
+
+{{ end }}
