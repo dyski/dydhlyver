@@ -11,7 +11,7 @@ description: "Random Learning Resources"
 {{< slider typeSorM="multiple">}}
 
    {{< slide_card_med 
-        img="/img/borabrav/cover.jpg" 
+        img="/img/borabrav/coversquare.jpg" 
         title="Bora Brav" 
         link="/borabrav/"
     >}}
@@ -21,6 +21,13 @@ description: "Random Learning Resources"
         title="KDL Old course" 
         link="/kdl-old/"
     >}}
+
+          {{< slide_card_med 
+        img="/img/bbc800x400.jpg" 
+        title="An Nowodhow" 
+        link="/news/"
+    >}}
+
 
 {{< /slider >}}
 

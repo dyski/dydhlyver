@@ -14,7 +14,7 @@
   {{ $sndlink := resources.Get $path }}
   <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>{{end}}
 
-<div class="message-item " style="padding: 2px 0px;" {{ if .audio }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
+<div class="message-item " style="padding: 2px 0px;">
     
     {{ range $inx, $pic := $elem_val.icon }}
     {{ $imgicon := resources.Get . }}
@@ -36,7 +36,7 @@
     <div class="content" >
         <div class="title">{{ $elem_val.header }}</div>
         
-        <div class="bubble">
+        <div class="bubble"  {{ if .audio }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
             {{ with $elem_val.image }}
                 {{ $imglink := resources.Get .  }}
             <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
@@ -53,6 +53,14 @@
 
 {{else}}
 
+{{if .audio }}
+  
+
+
+{{ $path := print "/audio/" .audio ".mp3"}}
+{{ $sndlink := resources.Get $path }}
+<audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+
 <div class="message-item user" style="padding: 2px 0px;">
 
    
@@ -60,7 +68,7 @@
       <div class="title" style="text-align: right;">{{ $elem_val.header }}</div>
       
       
-      <div class="bubble">
+      <div class="bubble" style="background:{{$elem_val.colour}}" {{ if .audio }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
         {{ with $elem_val.image }}
             {{ $imglink := resources.Get .  }}
         <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>

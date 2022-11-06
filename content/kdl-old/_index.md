@@ -13,3 +13,5 @@ data: "210103"
 withaudio: false
 draft: false
 ---
+
+KDL helps people who cannot go to classes to learn Cornish. KDL started in 1983 and hundreds of students have studied with us. Many are successful in the exams of the Cornish Language Board, more than fifty in the highest grade.

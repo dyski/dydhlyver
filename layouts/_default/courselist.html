@@ -16,24 +16,29 @@
     <!-- App Capsule -->
     <div id="appCapsule" >
 
-        <div class="listview-title sticky-title">
-            <div>
-                <strong>Content example</strong>
-            </div>
+        
+
+       
+
+        <div class="">
+            
+            {{$path := index $.Page.Params.images 0}}
+            {{ $imgsrc := resources.Get $path }}        
+            <img src="{{ ($imgsrc.Fill "800x420 q100 Center").RelPermalink }}" alt="image" class="imaged square w-100">
         </div>
+      
         <div class="section full">
             <div class="wide-block pt-2 pb-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum diam quis lacus laoreet tincidunt.
-                Vestibulum sem ipsum, rhoncus at tincidunt vel, faucibus a lacus. Integer ac accumsan dolor. Mauris vel
-                finibus justo. Nullam tincidunt porta ipsum et mattis. Donec hendrerit nunc erat, vitae tristique dolor
-                suscipit non. Donec quis urna nec quam tincidunt euismod. Proin mattis, felis ac congue congue, est
-                ipsum finibus nunc, at vestibulum neque orci eget nulla. Donec diam diam, vehicula eget fringilla quis,
-                laoreet et orci.
+                {{ .Content }} 
                
             </div>
         </div>
 
-
+        <div class="listview-title sticky-title">
+            <div>
+                <strong>Content</strong>
+            </div>
+        </div>
                 
 
               

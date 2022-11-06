@@ -9,7 +9,7 @@
     "footer": "",
     "cornish": "Dydh da.",
     "english": "Hello",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/01"
  },
   {
@@ -22,7 +22,7 @@
     "footer": "",
     "cornish": "Dydh da.",
     "english": "Hello",
-    "colour": "purple",
+    "colour": "crimson",
     "audio": "kdl/01/02"
  },
   {
@@ -35,7 +35,7 @@
     "footer": "",
     "cornish": "Mestresik Marner ov. Piw os ta?",
     "english": "I am Miss Marner. Who are you?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/03"
  },
   {
@@ -48,7 +48,7 @@
     "footer": "",
     "cornish": "Mester Tomas ov vy. ",
     "english": "I am Mr Tomas.",
-    "colour": "blue",
+    "colour": "crimson",
     "audio": "kdl/01/04"
  },
   {
@@ -61,7 +61,7 @@
     "footer": "",
     "cornish": "Pur dha. Dyskadores ov vy ha studhyer os ta. Pyth owgh hwi? ",
     "english": "Very good. I am a teacher and you are a student. What are you?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/05"
  },
   {
@@ -74,7 +74,7 @@
     "footer": "",
     "cornish": "Studhyer ov vy. ",
     "english": "I am a student.",
-    "colour": "green",
+    "colour": "crimson",
     "audio": "kdl/01/06"
  },
   {
@@ -87,7 +87,7 @@
     "footer": "",
     "cornish": "Studhyer ov vy. ",
     "english": "I am a student.",
-    "colour": "pink",
+    "colour": "crimson",
     "audio": "kdl/01/07"
  },
   {
@@ -100,7 +100,7 @@
     "footer": "",
     "cornish": "Ha Stefano hag Andi, pyth owgh hwi?",
     "english": "And Stephano and Andi, what are you?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/08"
  },
   {
@@ -114,7 +114,7 @@
     "footer": "",
     "cornish": "Studhyoryon on ni.",
     "english": "We are students.",
-    "colour": "brown",
+    "colour": "crimson",
     "audio": "kdl/01/09"
  },
   {
@@ -127,7 +127,7 @@
     "footer": "",
     "cornish": "Pur dha. Ha py klass yw hemma, mar pleg? ",
     "english": "Very good. And what class is this, please?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/10"
  },
   {
@@ -140,7 +140,7 @@
     "footer": "",
     "cornish": "An klass Kernewek yw hemma. ",
     "english": "This is the Cornish class.",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/11"
  },
   {
@@ -153,7 +153,7 @@
     "footer": "",
     "cornish": "Ple'th os ta trigys, Estelle? ",
     "english": "Where do you live, Estelle?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/12"
  },
   {
@@ -166,7 +166,7 @@
     "footer": "",
     "cornish": "Trigys ov vy yn Kernow, lemmyn.",
     "english": "I live in Cornwall, now.",
-    "colour": "pink",
+    "colour": "crimson",
     "audio": "kdl/01/13"
  },
   {
@@ -179,7 +179,7 @@
     "footer": "",
     "cornish": "Ha fatel yw an gewer hedhyw? ",
     "english": "And what's the weather like today?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/14"
  },
   {
@@ -192,7 +192,7 @@
     "footer": "",
     "cornish": "Nyns yw da an gewer hedhyw! Drog yw hi. ",
     "english": "The weather is not good today! It's bad.",
-    "colour": "yellow",
+    "colour": "crimson",
     "audio": "kdl/01/15"
  },
   {
@@ -205,7 +205,7 @@
     "footer": "",
     "cornish": "Ha fatla genowgh hwi? ",
     "english": "And how are you?",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/16"
  },
   {
@@ -218,7 +218,7 @@
     "footer": "",
     "cornish": "Yn poynt da, meurastajy.",
     "english": "Well, thank you.",
-    "colour": "",
+    "colour": "crimson",
     "audio": "kdl/01/17"
  },
   {
@@ -231,7 +231,7 @@
     "footer": "",
     "cornish": "Ha my ynwedh, yn poynt da. ",
     "english": "And me also, well.",
-    "colour": "olive",
+    "colour": "crimson",
     "audio": "kdl/01/18"
  },
   {
@@ -244,7 +244,7 @@
     "footer": "",
     "cornish": "Skwith ov vy!",
     "english": "I'm tired!",
-    "colour": "green",
+    "colour": "crimson",
     "audio": "kdl/01/19"
  }
  ]
