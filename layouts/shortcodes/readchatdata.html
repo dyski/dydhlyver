@@ -1,0 +1,101 @@
+{{ $data := .Get "data" }}
+{{ $dir := .Get "dir" }}
+
+
+  {{ range $elem_index, $elem_val :=   index (index .Site.Data $dir) $data }}
+
+        
+  {{if eq .class "left" }} 
+  {{if .audio }}
+  
+
+
+  {{ $path := print "/audio/" .audio ".mp3"}}
+  {{ $sndlink := resources.Get $path }}
+  <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+
+<div class="message-item " style="padding: 2px 0px;" {{ if .audio }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
+    
+    {{ range $inx, $pic := $elem_val.icon }}
+    {{ $imgicon := resources.Get . }}
+    {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+     <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar" style="margin-right: 10px;{{ if gt $inx 0 }} margin-left: -20px;{{ end }}">
+   
+  
+   
+    
+   
+    {{ end }}
+
+
+    
+   
+                       
+    
+
+    <div class="content" >
+        <div class="title">{{ $elem_val.header }}</div>
+        
+        <div class="bubble">
+            {{ with $elem_val.image }}
+                {{ $imglink := resources.Get .  }}
+            <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
+            {{ end }}
+            
+            <span data-bs-toggle="tooltip" data-bs-placement="top" 
+                title="{{ $elem_val.english }}">
+                {{ $elem_val.cornish }}</span>
+                
+        </div>
+        <div class="footer" style="text-align: left;">{{ $elem_val.footer }}</div>
+    </div>
+</div>
+
+{{else}}
+
+<div class="message-item user" style="padding: 2px 0px;">
+
+   
+  <div class="content">
+      <div class="title" style="text-align: right;">{{ $elem_val.header }}</div>
+      
+      
+      <div class="bubble">
+        {{ with $elem_val.image }}
+            {{ $imglink := resources.Get .  }}
+        <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
+        {{ end }}
+        
+        <span data-bs-toggle="tooltip" data-bs-placement="top" 
+            title="{{ $elem_val.english }}">
+            {{ $elem_val.cornish }}</span>
+            
+    </div>
+      <div class="footer" style="padding:0px;text-align: right;">{{ $elem_val.footer }}</div>
+  </div>
+  
+  
+  
+  {{ range $inx, $pic := $elem_val.icon }}
+  {{ $imgicon := resources.Get . }}
+  {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+   
+   <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar" style="margin-right: 0px;{{ if gt $inx 0 }} margin-left: -10px; {{else}} margin-left: 10px;{{ end }}">
+ 
+
+ 
+  
+ 
+  {{ end }}
+
+</div>
+
+{{end}}
+
+
+
+
+  {{ end }}
+
+
+

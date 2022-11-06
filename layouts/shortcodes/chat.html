@@ -1,6 +1,5 @@
 
-{{ $class := .Get "class" }}
-<div class="message-item {{ $class }}">
+<div class="message-item" style="padding: 2px 0px;">
     {{ with .Get "icon" }}
     {{ $imgicon := resources.Get .  }}
     {{ $imgicon:= $imgicon.Fill "64x64 center" }}
@@ -13,9 +12,13 @@
                 {{ $imglink := resources.Get .  }}
             <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
             {{ end }}
-            {{ .Get "text" }}
+            
+            <span data-bs-toggle="tooltip" data-bs-placement="top" 
+                title="English">
+                {{ .Get "text" }}</span>
+                
         </div>
-        <div class="footer">{{ .Get "time" }}</div>
+        <div class="footer" style="text-align: left;">{{ .Get "time" }}</div>
     </div>
 </div>
 

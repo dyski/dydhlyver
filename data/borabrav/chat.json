@@ -1,0 +1,250 @@
+[
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Dydh da.",
+    "english": "Hello",
+    "colour": "",
+    "audio": "ui-sounds/click01"
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/classroom.jpg"
+    ],
+    "header": "An klass",
+    "image": "",
+    "footer": "",
+    "cornish": "Dydh da.",
+    "english": "Hello",
+    "colour": "purple",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Mestresik Marner ov. Piw os ta?",
+    "english": "I am Miss Marner. Who are you?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/classroom.jpg"
+    ],
+    "header": "Mester Tomas",
+    "image": "",
+    "footer": "",
+    "cornish": "Mester Tomas ov vy. ",
+    "english": "I am Mr Tomas.",
+    "colour": "blue",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Pur dha. Dyskadores ov vy ha studhyer os ta. Pyth owgh hwi? ",
+    "english": "Very good. I am a teacher and you are a student. What are you?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/andi.jpg"
+    ],
+    "header": "Andi",
+    "image": "",
+    "footer": "",
+    "cornish": "Studhyer ov vy. ",
+    "english": "I am a student.",
+    "colour": "green",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/estelle.jpg"
+    ],
+    "header": "Estelle",
+    "image": "",
+    "footer": "",
+    "cornish": "Studhyer ov vy. ",
+    "english": "I am a student.",
+    "colour": "pink",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Ha Stefano hag Andi, pyth owgh hwi?",
+    "english": "And Stephano and Andi, what are you?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/stefano.jpg",
+       "/img/borabrav/andi.jpg"
+    ],
+    "header": "Stefano + Andi",
+    "image": "",
+    "footer": "",
+    "cornish": "Studhyoryon on ni.",
+    "english": "We are students.",
+    "colour": "brown",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Pur dha. Ha py klass yw hemma, mar pleg? ",
+    "english": "Very good. And what class is this, please?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/classroom.jpg"
+    ],
+    "header": "Mestresik Choak",
+    "image": "",
+    "footer": "",
+    "cornish": "An klass Kernewek yw hemma. ",
+    "english": "This is the Cornish class.",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Ple'th os ta trigys, Estelle? ",
+    "english": "Where do you live, Estelle?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/estelle.jpg"
+    ],
+    "header": "Estelle",
+    "image": "",
+    "footer": "",
+    "cornish": "Trigys ov vy yn Kernow, lemmyn.",
+    "english": "I live in Cornwall, now.",
+    "colour": "pink",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Ha fatel yw an gewer hedhyw? ",
+    "english": "And what's the weather like today?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/syvi.jpg"
+    ],
+    "header": "Syvi",
+    "image": "",
+    "footer": "",
+    "cornish": "Nyns yw da an gewer hedhyw! Drog yw hi. ",
+    "english": "The weather is not good today! It's bad.",
+    "colour": "yellow",
+    "audio": ""
+ },
+  {
+    "class": "left",
+    "icon": [
+       "/img/borabrav/metheven.jpg"
+    ],
+    "header": "Mestresik Marner",
+    "image": "",
+    "footer": "",
+    "cornish": "Ha fatla genowgh hwi? ",
+    "english": "And how are you?",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/classroom.jpg"
+    ],
+    "header": "Mestres Pengelli",
+    "image": "",
+    "footer": "",
+    "cornish": "Yn poynt da, meurastajy.",
+    "english": "Well, thank you.",
+    "colour": "",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/stefano.jpg"
+    ],
+    "header": "Stefano",
+    "image": "",
+    "footer": "",
+    "cornish": "Ha my ynwedh, yn poynt da. ",
+    "english": "And me also, well.",
+    "colour": "olive",
+    "audio": ""
+ },
+  {
+    "class": "right",
+    "icon": [
+       "/img/borabrav/andi.jpg"
+    ],
+    "header": "Andi",
+    "image": "",
+    "footer": "",
+    "cornish": "Skwith ov vy!",
+    "english": "I'm tired!",
+    "colour": "green",
+    "audio": ""
+ }
+ ]

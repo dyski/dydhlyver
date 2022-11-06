@@ -1,0 +1,18 @@
+<li class="splide__slide">
+    <div class="card">
+
+        
+    {{ $link := .Get "link" }}
+    <a href="{{ $link }}">
+        {{ with .Get "img" }}
+        {{ $img:= resources.Get .  }}
+        {{ $img:= $img.Fill "250x250 center" }}
+
+        <img src="{{ $img.RelPermalink }}" class="card-img-top" alt="image2">
+        {{end}}
+        <div class="card-body pt-2">
+            {{ with .Get "title" }}<h4 class="mb-0">{{ . }}</h4>{{end}}
+        </div>
+    </a>
+    </div>
+</li>

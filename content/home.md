@@ -1,9 +1,30 @@
 ---
-title: "Home"
+title: "Cornish.app"
 date: 2020-01-26T23:23:13Z
 layout: home
+description: "Random Learning Resources"
 ---
 
+{{< pagetitle >}}
+
+{{< section class="full mt-3 mb-3">}}
+{{< slider typeSorM="multiple">}}
+
+   {{< slide_card_med 
+        img="/img/borabrav/cover.jpg" 
+        title="Bora Brav" 
+        link="/borabrav/"
+    >}}
+
+      {{< slide_card_med 
+        img="/img/kdl800x400.jpg" 
+        title="KDL Old course" 
+        link="/kdl-old/"
+    >}}
+
+{{< /slider >}}
+
+{{< /section >}}
 
 {{< svgcard 
     colour="tomato" 

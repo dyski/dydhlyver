@@ -69,8 +69,8 @@
               
               <div onclick="document.getElementById('sound{{ $counter }}').play();">
                 <p> <span class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" 
-                title=" {{ index ( index (index $.Site.Data.annowodhow $.Page.Params.data) "english" ) $counter }}">
-                {{ index ( index (index $.Site.Data.annowodhow $.Page.Params.data) "cornish" ) $counter  | safeHTML }}</span>
+                title=" {{ index ( index (index $.Site.Data.annowodhow  $.File.TranslationBaseName) "english" ) $counter }}">
+                {{ index ( index (index $.Site.Data.annowodhow  $.File.TranslationBaseName) "cornish" ) $counter  | safeHTML }}</span>
                 </p>  
               </div>  
               
