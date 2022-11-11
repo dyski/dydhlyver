@@ -1,0 +1,21 @@
+<!--
+Parameters:
+    type - (Required) album / track / playlist / artist
+    id - (Required) Target ID
+    width - (Optional) width
+    height - (Optional) height
+-->
+
+<iframe src="https://www.youtube.com/embed/nltOENT0knI?controls=0&amp;start=17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe style="border-radius:12px" 
+src="https://open.spotify.com/embed/track/{{ .Get 0 }}?utm_source=generator&theme=0" 
+width="100%" height="152" 
+frameBorder="0" allowfullscreen="" 
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+loading="lazy">
+</iframe>
+
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ca/album/bro-goth-agan-tasow/260086764?i=260087100"></iframe>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/{{ .Get 0 }}?utm_source=generator&theme=0" width="250" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

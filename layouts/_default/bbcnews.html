@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- partial "masthead.html" . -}}
-<div id="appCapsule">
+<div id="appCapsule" class="bg-white">
     <div class="blog-post">
         
         <div class="mb-2">
@@ -50,7 +50,7 @@
             {{ $counter := 0 }}
           
             <div class="text-end collapse show placeholder-glow" id="text{{ $counter }}">
-            <button onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();" 
+            <button style="opacity:1" onclick="document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });document.getElementById('sound{{ $counter }}').play();" 
             class="btn btn-secondary me-1 mb-1 placeholder" type="button" data-bs-toggle="collapse" 
             data-bs-target="#text{{ $counter }}" >START</button> 
             </div>
@@ -77,7 +77,7 @@
               {{ $counter = add $counter 1 }}
               
               <div class="text-end collapse show placeholder-glow" id="text{{ $counter }}">
-                <button onclick="
+                <button style="opacity:1" onclick="
                 document.getElementById('end').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 document.getElementById('sound{{ $counter }}').play();"
                 class="btn btn-secondary me-1 mb-1 placeholder" type="button" data-bs-toggle="collapse" 

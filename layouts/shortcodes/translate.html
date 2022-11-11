@@ -1,0 +1,23 @@
+{{ $data := .Get "data" }}
+{{ $dir := .Get "dir" }}
+
+
+
+<div class="section mt-3 mb-3">
+ 
+  {{ range $elem_index, $elem_val :=  index (index (index .Site.Data $dir) $data) "cornish"   }}
+ 
+  
+  <p> 
+  <span class="mb-1" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ index ( index (index (index $.Site.Data $dir) $data) "english" ) $elem_index  }}">
+
+    {{ index ( index (index (index $.Site.Data $dir) $data) "cornish" ) $elem_index   | safeHTML  }}
+  </span>
+  </p>  
+
+  {{ end }} 
+</div>
+
+  
+
+      
