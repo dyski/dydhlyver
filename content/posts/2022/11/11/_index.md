@@ -14,11 +14,4 @@ withaudio: false
 draft: false
 ---
 
-
-
-
-{{< section class="message-divider" >}}
-Friday, Sep 20, 10:40 AM
-{{< /section >}}
-
 {{< readchatdata dir="interview" data="jori" >}}

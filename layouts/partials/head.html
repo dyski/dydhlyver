@@ -6,12 +6,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#000000">
   {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
- 
+  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }} 
   <title>{{ $title }}</title>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
-  
   <meta name="description" content="{{ if .Params.Description }}{{ .Params.Description }}{{ else if .Site.Params.Description }}{{ .Site.Params.Description }}{{ else }}A mobile Cornish lanuage app for learners{{ end }}" /> 
 
   <meta name="keywords" content="Kernewek app"/>
@@ -25,7 +23,5 @@
   {{ $appletouch := resources.Get "img/icon/192x192.png" }}  <link rel="apple-touch-icon" sizes="180x180"  href="{{ $appletouch.RelPermalink }}">
 
   <link rel="manifest" href="/manifest.json">
-
-
-  <link rel="stylesheet" href="/aplayer/calamansi.min.css">
+ 
 </head>

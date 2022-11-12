@@ -51,7 +51,18 @@
     </div>
 </div>
 
+
+  {{else if eq .class "center" }} 
+
+  <div class="message-divider" >
+    <span data-bs-toggle="tooltip" data-bs-placement="top" 
+    title="{{ $elem_val.english }}">
+    {{ $elem_val.cornish  | safeHTML }}</span>
+</div >
+
 {{else}}
+
+
 
 {{if .audio }}
   
