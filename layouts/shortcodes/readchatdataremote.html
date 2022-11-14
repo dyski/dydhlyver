@@ -2,9 +2,7 @@
 {{ $dir := .Get "dir" }}
 
 
-
-
-  {{ range $elem_index, $elem_val :=  getJSON "https://sheet2api.com/v1/6XVUcgDSSNaM/borabrav" }}
+  {{ range $elem_index, $elem_val :=   index (index .Site.Data $dir) $data }}
 
         
   {{if eq .class "left" }} 
