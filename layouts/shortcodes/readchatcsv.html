@@ -1,0 +1,117 @@
+{{ $url := .Get "url" }}{{ $sep := "," }}
+
+{{ range $elem_index, $row :=  getCSV $sep $url }}
+
+          {{ if ne $elem_index 0 }}
+          
+
+              {{if eq (index $row 0) "left" }} 
+              
+              
+                        {{if (index $row 8) }} {{ $path := print "/audio/" (index $row 8) ".mp3"}}
+                        {{ $sndlink := resources.Get $path }}
+                        <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>
+                        {{end}}
+                        
+                        
+                        <div class="message-item " style="padding: 2px 0px;">
+                          
+                          {{ $split := split (index $row 1) "," }}
+                        
+                          {{ range $inx, $split }}
+                          {{ $imgicon := resources.Get . }}
+                          {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+                        
+                          <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar" style="margin-right: 10px;{{ if gt $inx 0 }} margin-left: -20px;{{ end }}">
+                          {{ end }}
+                                      
+                          
+
+                          <div class="content" >
+                              <div class="title">{{ index $row 2 }}</div>
+                              
+                              <div class="bubble"  {{ if index $row 8 }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
+                                  {{ with index $row 3 }}
+                                      {{ $imglink := resources.Get .  }}
+                                  <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
+                                  {{ end }}
+                                  
+                                  <span data-bs-toggle="tooltip" data-bs-placement="top" 
+                                      title="{{ index $row 6 }}">
+                                      {{ index $row 5 }}</span>
+                                      
+                              </div>
+                              <div class="footer" style="text-align: left;">{{ index $row 4 }}</div>
+                          </div>
+                      </div>
+
+
+            {{else if eq (index $row 0) "center" }} 
+
+                        <div class="message-divider" >
+                          <span data-bs-toggle="tooltip" data-bs-placement="top" 
+                          title="{{ index $row 6  }}">
+                          {{ index $row 5  | safeHTML }}</span>
+                      </div >
+
+            {{else}}
+
+
+
+                      {{if (index $row 8) }}
+                        
+
+
+                      {{ $path := print "/audio/" (index $row 8) ".mp3"}}
+                      {{ $sndlink := resources.Get $path }}
+                      <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>{{end}}
+
+                      <div class="message-item user" style="padding: 2px 0px;">
+
+                        
+                        <div class="content">
+                            <div class="title" style="text-align: right;">{{ index $row 2 }}</div>
+                            
+                            
+                            <div class="bubble" style="background:{{index $row 7 }}" {{ if index $row 8 }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
+                              {{ with index $row 3 }}
+                                  {{ $imglink := resources.Get .  }}
+                              <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
+                              {{ end }}
+                              
+                              <span data-bs-toggle="tooltip" data-bs-placement="top" 
+                                  title="{{ index $row 6 }}">
+                                  {{ index $row 5 }}</span>
+                                  
+                          </div>
+                            <div class="footer" style="padding:0px;text-align: right;">{{ index $row 4 }}</div>
+                        </div>
+                        
+                        
+                        
+                        {{ $split := split (index $row 1) "," }}
+                        
+                        {{ range $inx, $split }}
+                        {{ $imgicon := resources.Get . }}
+                        {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+                      
+                        <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar" style="margin-right: 0px;{{ if gt $inx 0 }} margin-left: -10px; {{else}} margin-left: 10px;{{ end }}">
+                      
+
+                      
+                        
+                      
+                        {{ end }}
+
+                      </div>
+
+                      {{end}}
+
+
+
+            {{ end }}
+
+  {{ end }}
+
+
+

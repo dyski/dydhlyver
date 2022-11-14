@@ -1,6 +1,7 @@
 {
     "name": "Cornish.app",
     "short_name": "Cornish App",
+    "description": "Cornish personal web app testmode",
     "start_url": "/home/",
     "display": "standalone",
     "scope" : "/",

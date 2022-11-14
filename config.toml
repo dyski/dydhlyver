@@ -27,7 +27,11 @@ images = ['img/icon/512x512.png']
 [permalinks]
   news = "/An-Nowodhow/:2006/:01/:02/"
 
-
+[caches]
+  [caches.getcsv]
+    maxAge = 0
+  [caches.getjson]
+    maxAge = 0
 
 [menu]
   [[menu.main]]
