@@ -1,10 +1,25 @@
 {{ $url := .Get "url" }}{{ $sep := "," }}
 
 
+
+
+
+
 {{ range $elem_index, $row :=  getCSV $sep $url }}
 
           {{ if ne $elem_index 0 }}
+
+          {{if eq (index $row 0) "card-" }} 
           
+      
+      
+          <div class="card {{ with index $row 1 }} {{.}} {{else}} bg-info{{end}} mb-2">
+
+            <div class="card-body">
+                {{ with index $row 2 }}<h5 class="card-title">{{.}}</h5>{{ end }}
+                {{ with index $row 3 }}<p class="card-text">{{.}}</p>{{ end }}
+                
+          {{end}}
 
               {{if eq (index $row 0) "left" }} 
               
@@ -15,10 +30,10 @@
                         {{end}}
                         
                         
-                        <div class="message-item " style="width:100%;padding: 2px 0px;" >
+                        <div class="message-item " style="padding: 2px 0px;" >
                           
-                          {{ $split := split (index $row 1) "," }}
-                        
+            
+                            {{ $split := split (index $row 1) "," }}
                           {{ range $inx, $split }}
                           {{ $imgicon := resources.Get . }}
                           {{ $imgicon:= $imgicon.Fill "64x64 center" }}
@@ -28,14 +43,17 @@
                                       
                           
 
-                          <div class="content" style="width: 100%;" >
+                          <div class="content" >
                               <div class="title">{{ index $row 2 }}</div>
                               
                               <div class="bubble"  {{ if index $row 8 }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}}>
                                   {{ with index $row 3 }}
+                                  {{ $split := split . "," }}
+                                    {{ range $inx, $split }}
                                       {{ $imglink := resources.Get .  }}
+                                      {{ $imglink:= $imglink.Fill "160x160 center" }}
                                   <img src="{{ $imglink.RelPermalink }}" alt="photo" class="imaged w160"><br/>
-                                  {{ end }}
+                                  {{ end }} {{ end }}
                                   
                                   <span data-bs-toggle="tooltip" data-bs-placement="top" 
                                       title="{{ index $row 6 }}">
@@ -45,17 +63,10 @@
                               <div class="footer" style="text-align: left;">{{ index $row 4 }}</div>
                           </div>
 
-                          {{ range $inx, $split }}
-                          {{ $imgicon := resources.Get . }}
-                          {{ $imgicon:= $imgicon.Fill "64x64 center" }}
-                        
-                          <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="avatar" style="margin-right: 0px;{{ if gt $inx 0 }} margin-left: -10px; {{else}} margin-left: 10px;{{ end }}">
-                        
+                          
   
                         
-                          
-                        
-                          {{ end }}
+                
                       </div>
 
 
@@ -65,9 +76,15 @@
                           <span data-bs-toggle="tooltip" data-bs-placement="top" 
                           title="{{ index $row 6  }}">
                           {{ index $row 5  | safeHTML }}</span>
-                      </div >
+                        </div >
 
-            {{else}}
+            {{else if eq (index $row 0) "title" }} 
+
+                        <h2>
+                          {{ index $row 2  | safeHTML }}</h2>
+                          <p>{{ index $row 4  | safeHTML }}</p>
+
+            {{else if eq (index $row 0) "right"}}
 
 
 
@@ -120,8 +137,16 @@
 
                       {{end}}
 
+                     
+                     
+                      {{if eq (index $row 0) "-card" }} 
 
+                      
+                      {{ with index $row 4 }}<div class="card-footer text-muted">{{.}}</div>{{end}}
+                </div></div>
+                     {{end}}
 
             {{ end }}
 
   {{ end }}
+  
