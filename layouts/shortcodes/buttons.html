@@ -1,0 +1,31 @@
+{{ $url := .Get "url" }}{{ $sep := "," }}
+
+<div class="section full inset">
+   
+        
+    
+    
+    
+
+    <div class="wide-block pt-2 pb-2">
+        
+
+
+{{ range $elem_index, $row :=  getCSV $sep $url }}
+{{ if ne $elem_index 0 }}
+
+            {{if (index $row 4) }}
+                      {{ $path := print "/audio/" (index $row 4) ".mp3"}}
+                      {{ $sndlink := resources.Get $path }}
+                      <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>
+            {{end}}
+
+            <span data-bs-toggle="tooltip" data-bs-placement="top" 
+            title="{{ index $row 2 }}">
+            
+<button {{ if index $row 4 }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}} type="button" class="btn btn-primary me-1 mb-1" style="background:{{index $row 3 }} !important;border-color:{{index $row 3 }} !important;">{{ index $row 0 }}<br>{{ index $row 1 }}</button>
+</span>
+{{ end }}{{ end }}
+</div>
+
+</div>
