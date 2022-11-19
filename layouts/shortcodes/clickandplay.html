@@ -1,0 +1,59 @@
+{{ $url := .Get "url" }}{{ $sep := "," }}
+
+<div class="post-body">            
+  
+    <div class="mb-5">
+  
+    {{ $counter := 0 }}
+  
+        <div class="text-end collapse show placeholder-glow" id="text{{ $counter }}">
+        <button style="opacity:1" onclick="document.getElementById('sound{{ $counter }}').play();" 
+        class="btn btn-secondary me-1 mb-1 placeholder" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#text{{ $counter }}" >START</button> 
+        </div>
+  
+        {{ range $elem_index, $row :=  getCSV $sep $url }}
+        {{ if ne $elem_index 0 }}
+        
+                    {{if (index $row 4) }}
+                      {{ $path := print "/audio/" (index $row 4) ".mp3"}}
+                      <audio id="sound{{ $counter }}" src="{{ $path }}" preload="auto"></audio>
+                    {{end}}
+                    {{if (index $row 5) }}
+                    {{ $pathq := print "/audio/" (index $row 5) ".mp3"}}
+                              <audio id="soundq{{ $counter }}" src="{{ $pathq }}" preload="auto"></audio>
+        
+                    {{end}}
+
+    <div class="collapse" id="text{{ $counter }}" >
+      
+            <div>
+                <p> 
+                <span onclick="document.getElementById('sound{{ $counter }}').play();" class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" 
+                title="{{ index $row 1 }}">
+                {{if (index $row 4) }}▶️ {{end}}{{ index $row 0 | safeHTML }}</span>
+                {{if (index $row 5) }}            
+            <span onclick="document.getElementById('soundq{{ $counter }}').play();">
+                🙋 
+            </span>  
+            {{end}}
+                </p>  
+            </div>  
+
+            
+
+      
+      {{ $counter = add $counter 1 }}
+      
+            <div class="text-end collapse show placeholder-glow" id="text{{ $counter }}">
+                <button style="opacity:1" onclick="document.getElementById('sound{{ $counter }}').play();"
+                class="btn btn-secondary me-1 mb-1 placeholder" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#text{{ $counter }}">Continue</button>
+            </div>
+    
+    </div>
+  {{end}}
+    {{ end }}
+  
+    </div>
+</div>
