@@ -31,12 +31,22 @@
                 <p> 
                 <span onclick="document.getElementById('sound{{ $counter }}').play();" class="mb-3" data-bs-toggle="tooltip" data-bs-placement="top" 
                 title="{{ index $row 1 }}">
-                {{if (index $row 4) }}▶️ {{end}}{{ index $row 0 | safeHTML }}</span>
-                {{if (index $row 5) }}            
+                {{if (index $row 4) }}
+                <span class="iconedbox bg-primary iconedbox-sm">
+                    <ion-icon name="volume-high-outline" role="img" class="md hydrated" aria-label="play"></ion-icon>
+                </span>
+                
+                
+                {{end}}{{ index $row 0 | safeHTML }}</span>
+                <!--{{if (index $row 5) }}            
             <span onclick="document.getElementById('soundq{{ $counter }}').play();">
-                🙋 
+                <span class="iconedbox bg-primary iconedbox-sm">
+                    <ion-icon name="help-circle-outline" role="img" class="md hydrated" aria-label="play"></ion-icon>
+                </span>
             </span>  
-            {{end}}
+
+
+            {{end}}-->
                 </p>  
             </div>  
 
