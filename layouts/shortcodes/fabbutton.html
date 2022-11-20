@@ -1,0 +1,34 @@
+{{ $url := .Get "url" }}
+{{ $pos := .Get "pos" }}
+{{ $sep := "," }}
+
+<div class="fab-button animate {{ $pos }} dropdown">
+    <a href="#" class="fab" data-bs-toggle="dropdown">
+        <ion-icon name="ear-outline"></ion-icon>
+    </a>
+    
+    <div class="dropdown-menu">
+    
+    {{ range $elem_index, $row :=  getCSV $sep $url }}
+    {{ if ne $elem_index 0 }}
+
+                    {{ $icon := index $row 0 }}
+                    {{ $link := index $row 1 }}
+                    {{ $text := index $row 2 }}
+                    {{ $audio := index $row 3 }}
+
+                    {{if $audio }}
+                    {{ $path := print "/audio/" $audio ".mp3"}}                    
+                    <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>
+                    {{end}}
+
+
+        <a {{ if $audio }} onclick="document.getElementById('sound{{ $elem_index }}').play();"{{end}} class="dropdown-item" href="{{ $link }}">
+            <ion-icon name="{{ $icon }}"></ion-icon>
+            <p>{{ $text }}</p>
+        </a>
+
+    {{end}}
+    {{end}}
+    </div>
+</div>
