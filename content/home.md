@@ -31,10 +31,15 @@ description: "Random Learning Resources"
 
 {{< /slider >}}
 
+{{< cardlarge 
+    img="/img/cpn/CPN-xmas.jpg" 
+    subtitle="Cornish Heritage" 
+    title="Nadelik / Christmas" 
+    icon="cube-outline" 
+    link="/cpn"
+    linktext="View"  
+    bodytext="Phrases and words in Kernewek" >}}
 
-{{< svgcard 
-    colour="tomato" 
-    cornish="Avel Karensa" >}}
 
 
 
@@ -53,3 +58,7 @@ description: "Random Learning Resources"
     >}}
 
 {{< /slider >}}
+
+{{< svgcard 
+    colour="tomato" 
+    cornish="Avel Karensa" >}}

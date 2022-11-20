@@ -11,7 +11,7 @@ tags: []
 videos: []
 draft: false
 ---
-{{< figure src="/audio/cpn/CPN-xmas.jpg"  width="100%">}}
+{{< figure src="/audio/cpn/CPN-xmas.jpg" width="100%">}}
 
 {{< fabbutton pos="top-right" header="Stories" url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxm1csy_Cf2fxf7y_xkGHWSWzJVeapaIQCd79k6GdBZ76VLRBt_qt0Vz6sYvYXoynwgIE6fNEIAhV2/pub?gid=0&single=true&output=csv">}}
 
