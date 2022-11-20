@@ -1,6 +1,6 @@
 ---
 title: "interview"
-layout: blank
+layout: blankmargin
 description: "JoriAnsell"
 images: ['/img/kdl800x400.jpg']
 date: 2022-11-11T14:00:00Z
@@ -9,8 +9,6 @@ authors: ["Polin Prys"]
 audio: ""
 tags: []
 videos: []
-data: "210103"
-withaudio: false
 draft: false
 ---
 

@@ -1,10 +1,5 @@
 {{ $url := .Get "url" }}{{ $sep := "," }}
 
-
-
-
-
-
 {{ range $elem_index, $row :=  getCSV $sep $url }}
 
           {{ if ne $elem_index 0 }}

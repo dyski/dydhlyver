@@ -14,6 +14,7 @@
 {{ range $elem_index, $row :=  getCSV $sep $url }}
 {{ if ne $elem_index 0 }}
 
+
             {{if (index $row 4) }}
                       {{ $path := print "/audio/" (index $row 4) ".mp3"}}
                       {{ $sndlink := resources.Get $path }}

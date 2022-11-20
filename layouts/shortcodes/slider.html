@@ -1,9 +1,17 @@
  
     {{ $type := .Get "typeSorM" }}
-    <div class="carousel-{{ $type }} splide">
-        <div class="splide__track">
-            <ul class="splide__list"> 
-            {{.Inner}}  
-            </ul>
+    <div class="section full mb-3">
+        <div class="section-title">{{ .Get "header"}}</div>
+        <!-- carousel single -->
+        <div class="carousel-{{ $type }} splide">
+            <div class="splide__track">
+                <ul class="splide__list"> 
+                {{.Inner}}  
+                </ul>
+            </div>
         </div>
+        <!-- * carousel single -->
     </div>
+
+    
+    

@@ -1,0 +1,116 @@
+{{ $url := .Get "url" }}{{ $sep := "," }}
+
+<div class="section full mb-3">
+    <div class="section-title">{{ .Get "header"}}</div>
+    
+    <div class="wide-block p-0 pt-2 pb-2">
+
+        <!-- story-block -->
+        <div class="story-block splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    {{ range $elem_index, $row :=  getCSV $sep $url }}
+                    {{ if ne $elem_index 0 }}
+
+                    {{ $image := index $row 0 }}
+                    {{ $target := index $row 12 }}
+                    {{ $delay := index $row 1  }}
+                    {{ $class := index $row 2 }}
+                
+                {{ $imgicon := resources.Get $image  }}
+                {{ $imgicon:= $imgicon.Fill "64x64 center" }}
+                
+                    <li class="splide__slide {{ $class }}">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="{{ $delay }}" data-bs-target="#story{{ $elem_index }}">
+                            <img src="{{ $imgicon.RelPermalink }}" alt="altsquare" class="imaged w-100 rounded">
+                        </a>
+                        
+                    </li>
+
+
+                    {{end}}
+                    {{end}}
+                     
+                </ul>
+            </div>
+        </div>
+        <!-- * story-block -->
+
+
+    </div>
+
+
+
+
+
+    <!-- story popup-->
+
+{{ range $elem_index, $row :=  getCSV $sep $url }}
+{{ if ne $elem_index 0 }}
+
+
+{{ $image := index $row 3 }}
+{{ $icon := index $row 5 }}
+{{ $video := index $row 4 }}
+{{ $author := index $row 6 }}
+{{ $time := index $row 7 }}
+{{ $title := index $row 8 }}
+{{ $text := index $row 9 }}
+{{ $button := index $row 10 }}
+{{ $btnlink := index $row 11 }}
+{{ $fixbtn := index $row 12 }}
+{{ $fixlink := index $row 13 }}
+
+
+{{ $imglink := resources.Get $image }}
+{{ $imglink:= $imglink.Fill "1080x1920 center" }}
+{{ $imgicon := resources.Get $icon  }}
+{{ $imgicon:= $imgicon.Fill "64x64 center" }}
+
+
+
+
+<div class="modal fade stories" id="story{{ $elem_index }}" data-bs-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="story-image">
+
+                {{ with $video }}
+                {{ $vidlink := resources.Get .  }}
+                <video width="1080" height="1920" controls="false" autoplay loop>
+                    <source src="{{ $vidlink.RelPermalink }}" type="video/mp4" />
+                </video>
+  					{{ else }}
+                    
+  					<img src="{{ $imglink.RelPermalink }}" alt="image">
+  					{{ end }}
+
+
+            </div>
+            <div class="modal-header">
+                <a href="#" class="profile-detail">
+                <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="imaged w36 rounded me-1">
+                <div>
+                    <h4>{{ $author }}</h4>
+                    <span class="text-muted">{{ $time }}</span>
+                </div>
+                </a>
+                <a href="#" data-bs-dismiss="modal" class="close-stories">
+                    <ion-icon name="close"></ion-icon>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div>
+                    {{ with $title }}<h1>{{ . }}</h1>{{end}}
+                    {{ with $text }}<p>{{ . }}</p>{{ end }}
+                    {{ with $button }}<a href="{{ $btnlink }}" class="btn btn-primary">{{ . }}</a>{{ end }}
+                </div>
+                {{ with $fixbtn }}<a href="{{ $btnlink }}" class="fixed-btn btn btn-primary">{{ . }}</a>{{end}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}
+{{end}}

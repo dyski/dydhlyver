@@ -1,14 +1,14 @@
 ---
 title: "Cornish.app"
 date: 2020-01-26T23:23:13Z
-layout: home
+layout: blank
 description: "Random Learning Resources"
 ---
 
-{{< pagetitle >}}
+{{< story header="Stories" url="https://docs.google.com/spreadsheets/d/e/2PACX-1vSP4qCT6cJwUuTfewcbMJz7n4mpEhpGC8tlgKwwpZWUOU_vO0FeveQHmj1l9MuFfY70l4PR5pcyBwC9/pub?gid=0&single=true&output=csv">}}
 
-{{< section class="full mt-3 mb-3">}}
-{{< slider typeSorM="multiple">}}
+
+{{< slider typeSorM="multiple" header="Courses">}}
 
    {{< slide_card_med 
         img="/img/borabrav/coversquare.jpg" 
@@ -31,8 +31,25 @@ description: "Random Learning Resources"
 
 {{< /slider >}}
 
-{{< /section >}}
 
 {{< svgcard 
     colour="tomato" 
     cornish="Avel Karensa" >}}
+
+
+
+{{< slider typeSorM="multiple" header="Interviews">}}
+
+   {{< slide_card_med 
+        img="/img/people/joriansell.jpg" 
+        title="Rod & Jori" 
+        link="/posts/2022/11/11/"
+    >}}
+
+   {{< slide_card_med 
+        img="/img/people/mickpaynter.jpg" 
+        title="Mick & Yowann" 
+        link="/posts/2022/11/10/"
+    >}}
+
+{{< /slider >}}
