@@ -17,6 +17,7 @@ document.addEventListener('play', function(e){
 
 
 
+
 var locationBut = document.querySelectorAll('.get-location');
 if(locationBut.length){
     var locationSupport = document.getElementsByClassName('location-support')[0]
@@ -61,20 +62,3 @@ if(locationBut.length){
 
 
 
-var renewToggle = document.querySelectorAll(".renew")
-renewToggle.forEach(function (el) {
-    el.addEventListener("click", function () {
- // Get the current element
-var currentNode = document.querySelector('#greeting');
-
-// Logs the element and it's content into the console
-console.log(currentNode.outerHTML);
-
-// Replace the element
-currentNode.outerHTML =
-	'<div id="salutations">' +
-		'<h1>Hi, universe!</h1>' +
-		'<p>The sun is always shining!</p>' +
-	'</div>';
-    })
-});

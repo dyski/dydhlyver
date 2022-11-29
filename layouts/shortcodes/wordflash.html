@@ -1,0 +1,108 @@
+{{ $url := .Get "url" }}{{ $sep := "," }}
+
+<div class="section full mb-3">
+    <div class="section-title">{{ .Get "header"}}</div>
+    
+    <div class="wide-block p-0 pt-2 pb-2">
+
+        <!-- story-block -->
+        <div class="story-block splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                   
+                
+                    <li class="splide__slide">
+                        <a href="#" data-bs-toggle="modal" data-component="stories" data-time="" data-bs-target="#story1">
+                            <img src="/img/numbers/one.jpg" alt="altsquare" class="imaged w-100 rounded">
+                        </a>    
+                    </li>
+
+
+
+                    
+                     
+                </ul>
+            </div>
+        </div>
+        <!-- * story-block -->
+
+
+    </div>
+
+
+    <a href="#" data-bs-toggle="modal" data-component="stories" data-time="" data-bs-target="#story1">
+        oh well click me for a booup
+    </a>  
+
+
+    <!-- story popup-->
+
+{{ range $elem_index, $row :=  getCSV $sep $url }}
+{{ if ne $elem_index 0 }}
+
+
+{{ $cornish := index $row 0 }}
+{{ $english := index $row 1 }}
+{{ $audio := index $row 2 }}
+{{ $icon := index $row 3 }}
+{{ $titleC:= index $row 4 }}
+{{ $titleE:= index $row 5 }}
+
+
+
+{{ $imgicon := resources.Get $icon  }}
+{{ $imgicon:= $imgicon.Fill "64x64 center" }}
+
+
+
+<div class="modal fade stories" id="story{{ $elem_index }}" data-bs-backdrop="static" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="transition: 0.0s ease-in-out !important;">
+        <div class="modal-content">
+            <div class="story-image" style="background:#fff">
+
+
+            </div>
+            <div class="modal-header">
+                <a href="#" class="profile-detail">
+                    
+                <img src="{{ $imgicon.RelPermalink }}" alt="avatar" class="imaged w36 rounded me-1">
+                
+                <div>
+                    <h4>{{ $titleC }}</h4>
+                    <span class="text-muted">{{ $titleE }}</span>
+                </div>
+                </a>
+                <a href="#" data-bs-dismiss="modal" class="close-stories">
+                    <ion-icon name="close"></ion-icon>
+                </a>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="animated-title">
+                    <div class="text-top">
+                        <div><span>{{ $cornish }}</span></div>
+                    </div>
+                    <div class="text-bottom">
+                      <div>{{ $english }}</div>
+                    </div>
+                </div>
+                
+                {{ $path := print "/audio/" $audio ".mp3"}}
+            
+
+                <audio id="sound{{ $elem_index }}" src="{{ $path }}" preload="auto"></audio>
+                {{ $elem_index = add $elem_index 1 }}
+                <a href="#" onclick="document.getElementById('sound{{ $elem_index }}').play();" data-bs-toggle="modal" data-component="stories" data-bs-target="#story{{ $elem_index }}" class="fixed-btn btn btn-primary">Next</a>
+                
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{{end}}
+{{end}}
+

@@ -31,13 +31,6 @@
 
                     {{end}}
                     {{end}}
-
-                    <li class="splide__slide ">
-                        <a href="#" data-bs-toggle="modal" data-component="stories" data-bs-target="#storyIDvariable">
-                            <img src="" alt="altsquare" class="imaged w-100 rounded">
-                        </a>
-                        
-                    </li>
                      
                 </ul>
             </div>
@@ -113,20 +106,7 @@
                     <ion-icon name="close"></ion-icon>
                 </a>
             </div>
-            <div class="modal-body">
-
-
-                <div class="animated-title">
-                    <div class="text-top">
-                        <div><span>kernewek</span></div>
-                    </div>
-                    <div class="text-bottom">
-                      <div>english</div>
-                    </div>
-                </div>
-
-
-        
+            <div class="modal-body">       
                 <div>
                     {{ with $title }}<h1>{{ . }}</h1>{{end}}
                     {{ with $text }}<p>{{ . }}</p>{{ end }}
@@ -141,61 +121,3 @@
 {{end}}
 {{end}}
 
-
-
-<div class="modal stories" id="storyIDvariable" data-bs-backdrop="static" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document" style="transition: 0.0s ease-in-out !important;">
-        <div class="modal-content">
-            <div class="story-image" style="background:#fff">
-            </div>
-            <div class="modal-header">
-                <a href="#" data-bs-dismiss="modal" class="close-stories">
-                    <ion-icon name="close"></ion-icon>
-                </a>
-            </div>
-            <div class="modal-body">
-
-
-                <div class="animated-title">
-                    <div class="text-top">
-                        <div><span>kernewek</span></div>
-                    </div>
-                    <div class="text-bottom">
-                      <div>english</div>
-                    </div>
-                </div>
-
-                <a href="#" data-bs-toggle="modal" data-component="stories" data-bs-target="#storyIDvariable2" class="fixed-btn btn btn-primary">Next</a>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal stories" id="storyIDvariable2" data-bs-backdrop="static" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document" style="transition: 0.0s ease-in-out !important;">
-        <div class="modal-content">
-            <div class="story-image" style="background:#fff">
-            </div>
-            <div class="modal-header">
-                <a href="#" data-bs-dismiss="modal" class="close-stories">
-                    <ion-icon name="close"></ion-icon>
-                </a>
-            </div>
-            <div class="modal-body">
-
-
-                <div class="animated-title">
-                    <div class="text-top">
-                        <div><span>Aval</span></div>
-                    </div>
-                    <div class="text-bottom">
-                      <div>Apple</div>
-                    </div>
-                </div>
-
-                <a href="#" data-bs-toggle="modal" data-component="stories" data-bs-target="#storyIDvariable" class="fixed-btn btn btn-primary">Next</a>
-            </div>
-        </div>
-    </div>
-</div>
